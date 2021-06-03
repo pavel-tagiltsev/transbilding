@@ -428,3 +428,53 @@ img {
     width: 350px;
     padding: 20px;
 }
+
+/* Other */
+
+.other {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.other__title {
+    text-align: center;
+}
+
+.other__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.other__item {
+    width: 350px;
+    padding: 20px;
+}
+
+/* Partners */
+
+.partners {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.partners__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Footer */
+
+.main__footer {
+    min-height: 150px;
+    background-color: rgb(5, 90, 5);
+}
