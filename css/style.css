@@ -132,7 +132,7 @@ img {
     align-items: center;
 
     background-color: black;
-    background-image: url("/img/hd-bg.jpg");
+    background-image: url("../img/hd-bg.jpg");
     background-repeat: no-repeat;
 
     color: white;
@@ -328,5 +328,103 @@ img {
 }
 
 .team__content {
+    padding: 20px;
+}
+
+/* Design */
+
+.build-design__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.building,
+.design {
+    width: 395px;
+}
+
+.building__list,
+.design__list {
+    padding-left: 17px;
+}
+
+.building__item,
+.design__item {
+    margin: 5px;
+}
+
+/* Projects */
+
+.projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.projects__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects__item {
+    position: relative;
+    width: 33%;
+    height: 300px;
+}
+
+.projects__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects__img:hover ~ .projects__link {
+    display: flex;
+}
+
+.projects__link {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(199, 212, 114, 0.3);
+}
+
+.projects__link:hover {
+    display: flex;
+}
+
+.projects_subtitle {
+    text-align: center;
+}
+
+/* Competence */
+
+.competence {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgb(241, 238, 238);
+}
+
+.competence__title {
+    text-align: center;
+}
+
+.competence__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.competence__item {
+    width: 350px;
     padding: 20px;
 }
