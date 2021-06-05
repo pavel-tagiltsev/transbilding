@@ -537,3 +537,34 @@ img {
     min-height: 150px;
     background-color: rgb(5, 90, 5);
 }
+
+/* Animation */
+
+._hide{
+    transform: translate(0px, 20%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.hide-left {
+    transform: translate(50%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.hide-right {
+    transform: translate(-50%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.hide-small {
+    transform: scale(0, 0);
+    transition: all 1s ease 0s;
+}
+
+._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transform: scale(1, 1);
+}
