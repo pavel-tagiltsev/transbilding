@@ -42,18 +42,7 @@ if (animItems.length > 0) {
     
 }
 
-let body = document.querySelector("body");
-let bHeight = body.getBoundingClientRect().height;
-let screenY = window.innerHeight / 2;
 let btn = document.querySelector("#btn");
-
-window.onscroll = function() {
-  if (window.pageYOffset > screenY) {
-    btn.classList.add("fixed");
-  } else {
-    btn.classList.remove("fixed");
-  }
-};
 
 btn.onclick = function() {
   window.scrollTo({
@@ -61,3 +50,29 @@ btn.onclick = function() {
     behavior: 'smooth',
   });
 };
+
+function showModalByScroll() {
+    if ((window.pageYOffset + document.documentElement.clientHeight) + 1000 >= 
+    document.documentElement.scrollHeight) {
+        btn.classList.add("fixed"); 
+    } else {
+        btn.classList.remove("fixed");
+    }
+}
+
+window.addEventListener('scroll', showModalByScroll);
+
+
+const header = document.querySelector('.main-header');
+
+function fixedHeader() {
+    if (window.pageYOffset > window.pageYOffset - header.offsetHeight) {
+        header.classList.add('header-fixed');
+        document.body.style.marginTop = `${header.clientHeight}px`;
+    } else {
+        header.classList.remove('header-fixed');
+        document.body.style.marginTop = '0px';
+    }
+}
+fixedHeader();
+window.addEventListener('scroll', fixedHeader);

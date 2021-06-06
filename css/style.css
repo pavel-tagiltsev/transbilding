@@ -3,8 +3,8 @@
     font-style: normal;
     font-weight: 300;
     src: local('Circe'),
-      url('../fonts/Circe-Light.woff2') format('woff2'),
-      url('../fonts/Circe-Light.woff') format('woff');
+        url('../fonts/Circe-Light.woff2') format('woff2'),
+        url('../fonts/Circe-Light.woff') format('woff');
 }
 
 @font-face {
@@ -12,10 +12,10 @@
     font-style: normal;
     font-weight: 400;
     src: local('Circe'),
-      url('../fonts/Circe-Regular.woff2') format('woff2'),
-      url('../fonts/Circe-Regular.woff') format('woff');
+        url('../fonts/Circe-Regular.woff2') format('woff2'),
+        url('../fonts/Circe-Regular.woff') format('woff');
 }
-  
+
 @font-face {
     font-family: 'Circe';
     font-style: normal;
@@ -23,56 +23,58 @@
     src: local('Circe'),
         url('../fonts/Circe-Bold.woff2') format('woff2'),
         url('../fonts/Circe-Bold.woff') format('woff');
-    }
+}
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
 }
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-*, ::before, ::after {
-  box-sizing: inherit;
+*,
+::before,
+::after {
+    box-sizing: inherit;
 }
 
 body {
-  min-width: 1200px;
-  margin: 0;
-  padding: 0;
-  padding-top: 40px;
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
 
-  font-weight: 400;
-  font-family: 'Circe', Arial, sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+    font-weight: 400;
+    font-family: 'Circe', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .title {
@@ -90,9 +92,14 @@ img {
 
 /* Header */
 .main-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+
+.main-header .container {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
 }
 
 .logo-img {
@@ -347,7 +354,7 @@ img {
     width: 275px;
     margin-right: 20px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .team__card:last-child {
@@ -383,7 +390,7 @@ img {
 }
 
 .building__title::before {
-    content: '';                     
+    content: '';
     position: absolute;
     top: -2px;
     left: -2px;
@@ -393,7 +400,7 @@ img {
 }
 
 .building__title::after {
-    content: '';                     
+    content: '';
     position: absolute;
     top: -60px;
     left: -2px;
@@ -409,7 +416,7 @@ img {
 }
 
 .design__title::before {
-    content: '';                     
+    content: '';
     position: absolute;
     left: -2px;
     bottom: -2px;
@@ -419,7 +426,7 @@ img {
 }
 
 .design__title::after {
-    content: '';                     
+    content: '';
     position: absolute;
     top: 50px;
     left: -2px;
@@ -471,7 +478,7 @@ img {
     object-fit: cover;
 }
 
-.projects__img:hover ~ .projects__link {
+.projects__img:hover~.projects__link {
     display: flex;
 }
 
@@ -571,7 +578,7 @@ img {
 
 /* Animation */
 
-._hide{
+._hide {
     transform: translate(0px, 20%);
     opacity: 0;
     transition: all 0.8s ease 0s;
@@ -615,8 +622,17 @@ img {
     right: 30px;
     transform: scale(0);
     transition: 0.34s linear;
-  }
-  
-  #btn.fixed {
+}
+
+#btn.fixed {
     transform: scale(1);
-  }
+}
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: 100;
+}
