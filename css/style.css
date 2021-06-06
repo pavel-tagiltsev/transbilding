@@ -606,3 +606,17 @@ img {
     opacity: 1;
     transform: scale(1, 1);
 }
+
+/* Test */
+
+#btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transform: scale(0);
+    transition: 0.34s linear;
+  }
+  
+  #btn.fixed {
+    transform: scale(1);
+  }
