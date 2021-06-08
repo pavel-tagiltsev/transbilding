@@ -106,7 +106,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // которая не станет выполняться
         // если размер больше 540px
     }
-    
+
     const swiper = new Swiper('.swiper-container', {
         speed: 400,
         // spaceBetween: 100,
@@ -119,15 +119,17 @@ window.addEventListener("DOMContentLoaded", () => {
         breakpoints: {
             // when window width is >= 320px
             320: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 25
             },
-            // when window width is >= 480px
+
+            // when window width is >= 678px
             678: {
               slidesPerView: 2,
               spaceBetween: 50
             },
-            // when window width is >= 640px
+
+            // when window width is >= 1300px
             1300: {
               slidesPerView: 3,
               spaceBetween: 100
