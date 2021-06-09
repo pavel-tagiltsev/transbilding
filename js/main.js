@@ -71,33 +71,33 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Header logic
 
-    function headerScrollAnimation() {
-        const header = document.querySelector('.main-header');
+    // function headerScrollAnimation() {
+    //     const header = document.querySelector('.main-header');
 
-        function hideHeader() {
-            if (window.pageYOffset > header.offsetHeight) {
-                header.classList.add('header-hide');
-            } else {
-                header.classList.remove('header-hide');
-            }
-        }
+    //     function hideHeader() {
+    //         if (window.pageYOffset > header.offsetHeight) {
+    //             header.classList.add('header-hide');
+    //         } else {
+    //             header.classList.remove('header-hide');
+    //         }
+    //     }
         
-        function fixedHeader() {
-            if (window.pageYOffset > header.offsetHeight * 2) {
-                header.classList.add('header-fixed');
-                document.body.style.marginTop = `${header.clientHeight}px`;
-            } else {
-                header.classList.remove('header-fixed');
-                document.body.style.marginTop = '0px';
-            }  
-        }
+    //     function fixedHeader() {
+    //         if (window.pageYOffset > header.offsetHeight * 2) {
+    //             header.classList.add('header-fixed');
+    //             document.body.style.marginTop = `${header.clientHeight}px`;
+    //         } else {
+    //             header.classList.remove('header-fixed');
+    //             document.body.style.marginTop = '0px';
+    //         }  
+    //     }
 
-        hideHeader();
-        fixedHeader();
-    }
+    //     hideHeader();
+    //     fixedHeader();
+    // }
 
-    headerScrollAnimation();
-    window.addEventListener('scroll', headerScrollAnimation);
+    // headerScrollAnimation();
+    // window.addEventListener('scroll', headerScrollAnimation);
 
     // Slider logic
 
@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // если размер больше 540px
     }
 
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('#swiper', {
         speed: 400,
         // spaceBetween: 100,
         direction: 'horizontal',
@@ -135,6 +135,36 @@ window.addEventListener("DOMContentLoaded", () => {
               spaceBetween: 100
             }
           }
+      });
+
+      const swiper2 = new Swiper('#swiper-2', {
+        speed: 400,
+        // spaceBetween: 100,
+        direction: 'vertical',
+        slidesPerView: 2
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
+        // breakpoints: {
+        //     // when window width is >= 320px
+        //     320: {
+        //       slidesPerView: 1,
+        //       spaceBetween: 25
+        //     },
+
+        //     // when window width is >= 678px
+        //     678: {
+        //       slidesPerView: 2,
+        //       spaceBetween: 50
+        //     },
+
+        //     // when window width is >= 1300px
+        //     1300: {
+        //       slidesPerView: 2,
+        //     //   spaceBetween: 100
+        //     }
+        //   }
       });
 
 });
