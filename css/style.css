@@ -300,7 +300,8 @@ img {
 
 .about {
     position: relative;
-    background-image: url("../img/shutter.jpg");
+    /* background-image: url("../img/shutter.jpg"); */
+    background-color: var(--gold);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -351,53 +352,192 @@ img {
 /* Map */
 
 .map {
+    position: relative;
     padding-top: 60px;
     /* display: flex;
     align-items: center; */
 }
-
+/* 
 .map__container {
-    position: relative;
-}
+} */
 
 .map__pin {
     position: absolute;
-    content: url("../img/pin.png");
-    width: 50px;
-    height: 70px;
+    content: '';
+    width: 25px;
+    height: 35px;
+    background-image: url("../img/pin.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
     transform: translate(0px, -400%);
     opacity: 0;
 }
 
 .map__pin:first-of-type {
-    top: 83px;
-    left: 66px;
+    top: 41%;
+    left: 10%;
+    transition: all 1s ease 0.1s;
+}
+
+.map__pin:nth-of-type(2) {
+    top: 45.5%;
+    left: 9.5%;
+    transition: all 1s ease 0.2s;
+}
+
+.map__pin:nth-of-type(3) {
+    top: 50%;
+    left: 9.5%;
+    transition: all 1s ease 0.3s;
+}
+
+.map__pin:nth-of-type(4) {
+    top: 58%;
+    left: 5%;
+    transition: all 1s ease 0.4s;
+}
+
+.map__pin:nth-of-type(5) {
+    top: 58%;
+    left: 8%;
     transition: all 1s ease 0.5s;
 }
 
-.map__pin:nth-child(3n) {
-    top: 166px;
-    left: 228px;
+.map__pin:nth-of-type(6) {
+    top: 59%;
+    left: 12%;
+    transition: all 1s ease 0.6s;
+}
+
+.map__pin:nth-of-type(7) {
+    top: 58.5%;
+    left: 15.5%;
+    transition: all 1s ease 0.7s;
+}
+
+.map__pin:nth-of-type(8) {
+    top: 58.5%;
+    left: 19%;
     transition: all 1s ease 0.8s;
 }
 
-.map__pin:nth-child(4n) {
-    top: 66px;
-    left: 528px;
+.map__pin:nth-of-type(9) {
+    top: 55.5%;
+    left: 21%;
+    transition: all 1s ease 0.9s;
+}
+
+.map__pin:nth-of-type(10) {
+    top: 54.5%;
+    left: 18%;
+    transition: all 1s ease 1s;
+}
+
+.map__pin:nth-of-type(11) {
+    top: 53.5%;
+    left: 15.5%;
     transition: all 1s ease 1.1s;
 }
+
+.map__pin:nth-of-type(12) {
+    top: 50%;
+    left: 16.5%;
+    transition: all 1s ease 1.2s;
+}
+
+.map__pin:nth-of-type(13) {
+    top: 49.5%;
+    left: 18.5%;
+    transition: all 1s ease 1.3s;
+}
+
+.map__pin:nth-of-type(14) {
+    top: 45%;
+    left: 16.5%;
+    transition: all 1s ease 1.4s;
+}
+
+.map__pin:nth-of-type(15) {
+    top: 47%;
+    left: 14.5%;
+    transition: all 1s ease 1.5s;
+}
+
+.map__pin:nth-of-type(16) {
+    top: 42%;
+    left: 14.5%;
+    transition: all 1s ease 1.6s;
+}
+
+.map__pin:nth-of-type(17) {
+    top: 45%;
+    left: 13%;
+    transition: all 1s ease 1.7s;
+}
+
+.map__pin:nth-of-type(18) {
+    top: 45.5%;
+    left: 11.5%;
+    transition: all 1s ease 1.8s;
+}
+
+.map__pin:nth-of-type(19) {
+    top: 40.5%;
+    left: 12%;
+    transition: all 1s ease 1.9s;
+}
+
+.map__pin:nth-of-type(20) {
+    top: 33.5%;
+    left: 15%;
+    transition: all 1s ease 2s;
+}
+
+.map__pin:nth-of-type(21) {
+    top: 27.5%;
+    left: 17%;
+    transition: all 1s ease 2.1s;
+}
+
+.map__pin:nth-of-type(22) {
+    top: 69.5%;
+    left: 35.5%;
+    transition: all 1s ease 2.2s;
+}
+
+.map__pin:nth-of-type(23) {
+    top: 74.5%;
+    left: 39.5%;
+    transition: all 1s ease 2.3s;
+}
+
+.map__pin:nth-of-type(24) {
+    top: 67.5%;
+    left: 42%;
+    transition: all 1s ease 2.4s;
+}
+
+.map__pin:nth-of-type(25) {
+    top: 78.5%;
+    left: 44.5%;
+    transition: all 1s ease 2.5s;
+}
+
 
 .map__img {
     width: 100%;
     height: 100%;
-    object-position: 0 -50px;
+    object-position: 0 0;
 }
 
 .map__content {
     position: absolute;
-    top: 0;
+    top: 80px;
     right: 0;
     width: 500px;
+    z-index: 1;
 }
 
 .map__inner {
@@ -478,7 +618,7 @@ img {
     padding-top: 60px;
     padding-bottom: 60px;
     align-items: baseline;
-    background-image: url('../img/Background.png');
+    /* background-image: url('../img/Background.png'); */
     background-repeat: no-repeat;
     background-position: 90px 375px;
     background-size: 70%;
