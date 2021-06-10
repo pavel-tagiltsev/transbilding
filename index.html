@@ -21,7 +21,7 @@
             <nav class="main-nav">
                 <ul class="main-nav__list">
                     <li class="main-nav__item"><a>Главная</a></li>
-                    <li class="main-nav__item"><a>О компании</a></li>
+                    <li class="main-nav__item"><a data-id="about">О компании</a></li>
                     <li class="main-nav__item"><a>Выполненные работы</a></li>
                     <li class="main-nav__item"><a>Наши клиенты</a></li>
                     <li class="main-nav__item"><a>Контакты</a></li>
@@ -34,10 +34,10 @@
         <section class="promo">
             <div class="container">
                 <div class="promo__lead">
-                    <h2 class="promo__title _anim-items _hide _anim-no-hide">Lorem, ipsum <span>dolor.</span></h2>
-                    <p class="promo__text">Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Odio ipsam, quia
-                        repellat placeat explicabo labore.</p>
+                    <h2 class="promo__title _anim-items _hide _anim-no-hide">Cтроительство, ремонт, реконструкция <span>под ключ</span></h2>
+                    <p class="promo__text">15 лет в России и за рубежом, более 500 
+                        объектов жилого и нежилого назначения, любые объемы работ от 
+                        проектирования до готового сооружения.</p>
                 </div>
                 <img class="promo__img _anim-items _hide _anim-no-hide" src="img/elect.png" alt="">
             </div>
@@ -47,35 +47,35 @@
         <section class="expertise container">
             <ul class="expertise__list">
                 <li class="expertise__item _anim-items hide-bottom-1 _anim-no-hide">
-                    <img class="expertise__img" src="img/expertise/expertise-1.png" alt="">
+                    <img class="expertise__img" src="img/expertise/expertise-1.jpg" alt="">
                     <h3 class="expertise__text expertise__text--manhole">Устройство наружных сетей канализации</h3>
                 </li>
                 <li class="expertise__item _anim-items hide-bottom-2 _anim-no-hide">
-                    <img class="expertise__img" src="img/expertise/expertise-2.png" alt="">
+                    <img class="expertise__img" src="img/expertise/expertise-2.jpg" alt="">
                     <h3 class="expertise__text expertise__text--pipe-closed">Устройство наружных сетей теплоснабжения</h3>
                 </li>
                 <li class="expertise__item _anim-items hide-bottom-3 _anim-no-hide">
-                    <img class="expertise__img" src="img/expertise/expertise-3.png" alt="">
+                    <img class="expertise__img" src="img/expertise/expertise-3.jpg" alt="">
                     <h3 class="expertise__text expertise__text--traffic-cone">Строительство дорог и благоустройство территорий</h3>
                 </li>
                 <li class="expertise__item _anim-items hide-bottom-4 _anim-no-hide">
-                    <img class="expertise__img" src="img/expertise/expertise-4.png" alt="">
+                    <img class="expertise__img" src="img/expertise/expertise-4.jpg" alt="">
                     <h3 class="expertise__text expertise__text--electricity">Устройство наружных электрических сетей и линий связи</h3>
                 </li>
                 <li class="expertise__item _anim-items hide-bottom-5 _anim-no-hide">
-                    <img class="expertise__img" src="img/expertise/expertise-3.png" alt="">
+                    <img class="expertise__img" src="img/expertise/expertise-5.jpg" alt="">
                     <h3 class="expertise__text experitse__text--engine">Строительство внутренних инженерных
                         систем и оборудования зданий и сооружений</h3>
                 </li>
                 <li class="expertise__item _anim-items hide-bottom-6 _anim-no-hide">
-                    <img class="expertise__img" src="img/expertise/expertise-4.png" alt="">
+                    <img class="expertise__img" src="img/expertise/expertise-6.jpg" alt="">
                     <h3 class="expertise__text experitse_text--pipe">Устройство наружных и внутренних сетей 
                         водостабжения, водоподготовка</h3>
                 </li>
             </ul>
         </section>
 
-        <section class="about">
+        <section id="about" class="about">
             <!-- <video class="about__video" loop muted autoplay src="video/promo_video.mp4"></video> -->
             <div class="about__blur">
                 <div class="container">
@@ -122,7 +122,7 @@
         </section>
 
         <section class="map container">
-            <img class="map__img" src="img/map.png" width="650" height="325" alt="Крарта россии">
+            <img class="map__img" src="img/map/map.png" width="650" height="325" alt="Крарта россии">
             <div class="map__pin _anim-items hide-top _anim-no-hide"></div>
             <div class="map__pin _anim-items hide-top _anim-no-hide"></div>
             <div class="map__pin _anim-items hide-top _anim-no-hide"></div>
@@ -208,7 +208,7 @@
             <h2 class="team__title title container">Команда<br> и ресурсы</h2>
             <div class="team__wrapper container">
                 <div class="team__card _anim-items hide-bottom-1 _anim-no-hide">
-                    <img class="team__img" src="img/expertise/expertise-1.png" alt="">
+                    <img class="team__img" src="img/team/team-1.jpg" alt="">
                     <div class="team__content">
                         <h3 class="team__subtitle subtitle team__subtitle--wheel">Собственные машины и механизмы</h3>
                         <ul class="team__list">
@@ -221,7 +221,7 @@
                     </div>
                 </div>
                 <div class="team__card _anim-items hide-bottom-2 _anim-no-hide">
-                    <img class="team__img" src="img/expertise/expertise-2.png" alt="">
+                    <img class="team__img" src="img/team/team-2.jpg" alt="">
                     <div class="team__content">
                         <h3 class="team__subtitle subtitle team__subtitle--crane">Навесное оборудование</h3>
                         <ul class="team__list">
@@ -231,7 +231,7 @@
                     </div>
                 </div>
                 <div class="team__card _anim-items hide-bottom-3 _anim-no-hide">
-                    <img class="team__img" src="img/expertise/expertise-3.png" alt="">
+                    <img class="team__img" src="img/team/team-3.jpg" alt="">
                     <div class="team__content">
                         <h3 class="team__subtitle subtitle team__subtitle--builder">Собственный персонал</h3>
                         <ul class="team__list">
@@ -244,7 +244,7 @@
                     </div>
                 </div>
                 <div class="team__card _anim-items hide-bottom-4 _anim-no-hide">
-                    <img class="team__img" src="img/expertise/expertise-4.png" alt="">
+                    <img class="team__img" src="img/team/team-4.jpg" alt="">
                     <div class="team__content">
                         <h3 class="team__subtitle subtitle team__subtitle--aerial-platform">Арендованная техника</h3>
                         <ul class="team__list">
@@ -312,25 +312,25 @@
             <h2 class="projects__title title">Портфолио</h2>
             <ul class="projects__list">
                 <li class="projects__item _anim-items hide-left-22 _anim-no-hide">
-                    <img class="projects__img" src="img/expertise/expertise-1.png" alt="">
+                    <img class="projects__img" src="img/project/project-1.jpg" alt="">
                     <a href="" class="projects__link">
                         <h3 class="projects_subtitle">Lorem, ipsum.</h3>
                     </a>
                 </li>
                 <li class="projects__item _anim-items hide-left-11 _anim-no-hide">
-                    <img class="projects__img" src="img/expertise/expertise-2.png" alt="">
+                    <img class="projects__img" src="img/project/project-2.jpg" alt="">
                     <a href="" class="projects__link">
                         <h3 class="projects_subtitle">Lorem, ipsum.</h3>
                     </a>
                 </li>
                 <li class="projects__item _anim-items hide-right-11 _anim-no-hide">
-                    <img class="projects__img" src="img/expertise/expertise-3.png" alt="">
+                    <img class="projects__img" src="img/project/project-3.jpg" alt="">
                     <a href="" class="projects__link">
                         <h3 class="projects_subtitle">Lorem, ipsum.</h3>
                     </a>
                 </li>
                 <li class="projects__item _anim-items hide-right-22 _anim-no-hide">
-                    <img class="projects__img" src="img/expertise/expertise-4.png" alt="">
+                    <img class="projects__img" src="img/project/project-1.jpg" alt="">
                     <a href="" class="projects__link">
                         <h3 class="projects_subtitle">Lorem, ipsum.</h3>
                     </a>

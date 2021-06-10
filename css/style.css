@@ -258,7 +258,31 @@ img {
 .expertise__img {
     width: 100%;
     height: 66%;
+    object-fit: cover;
 }
+
+.expertise__item:nth-child(2) img {
+    object-position: -270px 0;
+}
+
+.expertise__item:nth-child(3) img {
+    object-position: -50px 0;
+}
+
+.expertise__item:nth-child(4) img {
+    object-position: -300px 0;
+}
+
+.expertise__item:nth-child(5) img {
+    object-position: -100px 0;
+}
+
+.expertise__item:nth-child(6) img {
+    object-position: -250px 0;
+}
+
+
+
 
 .expertise__text {
     height: 34%;
@@ -284,11 +308,11 @@ img {
 }
 
 .expertise__text--manhole::after {
-    background-image: url('../img/manhole.svg');
+    background-image: url('../img/icons/manhole.svg');
 }
 
 .expertise__text--pipe-closed::after {
-    background-image: url('../img/pipe_closed.svg');
+    background-image: url('../img/icons/pipe_closed.svg');
     top: 40px;
     right: 20px;
     width: 70px;
@@ -296,11 +320,11 @@ img {
 }
 
 .expertise__text--traffic-cone::after {
-    background-image: url('../img/traffic-cone.svg');
+    background-image: url('../img/icons/traffic-cone.svg');
 }
 
 .expertise__text--electricity::after {
-    background-image: url('../img/еlectricity.svg');
+    background-image: url('../img/icons/еlectricity.svg');
     top: 40px;
     right: 20px;
     width: 70px;
@@ -308,11 +332,11 @@ img {
 }
 
 .experitse__text--engine::after {
-    background-image: url('../img/еngine.svg'); 
+    background-image: url('../img/icons/еngine.svg'); 
 }
 
 .experitse_text--pipe::after {
-    background-image: url('../img/pipe.svg');
+    background-image: url('../img/icons/pipe.svg');
     top: 40px;
     right: 20px;
     width: 70px;
@@ -323,7 +347,7 @@ img {
 
 .about {
     position: relative;
-    /* background-image: url("../img/shutter.jpg"); */
+    background-image: url("../img/shutter.jpg");
     background-color: var(--gold);
     background-repeat: no-repeat;
     background-size: cover;
@@ -384,7 +408,7 @@ img {
     content: '';
     width: 25px;
     height: 35px;
-    background-image: url("../img/pin.svg");
+    background-image: url("../img/map/pin.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -625,10 +649,25 @@ img {
     /* border: 1px solid var(--gold); */
 }
 
+.team__card:first-child img {
+    object-position: -70px 0;
+}
+
+.team__card:nth-child(3) img {
+    object-position: 0 0;
+}
+
+.team__card:nth-child(4) img {
+    object-position: 0 0;
+}
+
+
+
 .team__img {
     display: block;
     width: 100%;
     height: 250px;
+    object-fit: cover;
 }
 
 .team__content {
@@ -654,11 +693,11 @@ img {
 }
 
 .team__subtitle--wheel::before {
-    background-image: url('../img/wheel.svg');
+    background-image: url('../img/icons/wheel.svg');
 }
 
 .team__subtitle--crane::before {
-    background-image: url('../img/сrane.svg');
+    background-image: url('../img/icons/сrane.svg');
     top: -15px;
     left: -10px;
     width: 60px;
@@ -666,11 +705,11 @@ img {
 }
 
 .team__subtitle--builder::before {
-    background-image: url('../img/builder.svg');
+    background-image: url('../img/icons/builder.svg');
 }
 
 .team__subtitle--aerial-platform::before {
-    background-image: url('../img/aerial-platform.svg');
+    background-image: url('../img/icons/aerial-platform.svg');
 }
 
 /* Design */
@@ -680,10 +719,10 @@ img {
     justify-content: space-between;
     padding-top: 60px;
     align-items: baseline;
-    /* background-image: url('../img/Background.png'); */
+    background-image: url('../img/Background.jpg');
     background-repeat: no-repeat;
-    background-position: 90px 375px;
-    background-size: 70%;
+    background-position: 140px 300px;
+    background-size: 65%;
     overflow: hidden;
 }
 

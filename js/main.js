@@ -49,6 +49,18 @@ window.addEventListener("DOMContentLoaded", () => {
     // Button, which leads up, logic
 
     let btn = document.querySelector("#btn");
+    const about = document.querySelector('#about');
+    const aboutLink = document.querySelector('[data-id="about"]');
+
+    aboutLink.addEventListener('click', (evt) => {
+        evt.preventDefault();
+
+        console.log(about.getBoundingClientRect());
+        window.scrollTo({
+            top: about.getBoundingClientRect().top,
+            behavior: 'smooth',
+          });
+    });
     
     btn.onclick = function() {
       window.scrollTo({
