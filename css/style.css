@@ -1127,6 +1127,19 @@ img {
     right: 30px;
     transform: scale(0);
     transition: 0.34s linear;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#btn:hover path{
+    fill: gold;
+}
+
+#btn path {
+    fill: var(--gold);
 }
 
 #btn.fixed {
