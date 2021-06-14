@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const animItems = document.querySelectorAll('._anim-items');
 
+
     if (animItems.length > 0) {
 
         const animOnScroll = function () {
