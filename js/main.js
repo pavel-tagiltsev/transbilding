@@ -147,7 +147,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Slider logic
 
-    const swiper = new Swiper('#swiper', {
+    const swiper = new Swiper('#swiper-other', {
         speed: 400,
         // spaceBetween: 100,
         direction: 'horizontal',
@@ -155,6 +155,9 @@ window.addEventListener("DOMContentLoaded", () => {
         navigation: {
             nextEl: '.other__next',
             prevEl: '.other__prev'
+        },
+        autoplay: {
+            delay: 5000,
         },
         breakpoints: {
             // when window width is >= 320px
@@ -177,7 +180,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const swiper2 = new Swiper('#swiper-2', {
+    const swiper2 = new Swiper('#swiper-certificates', {
         speed: 400,
         // spaceBetween: 100,
         direction: 'horizontal',
@@ -185,6 +188,9 @@ window.addEventListener("DOMContentLoaded", () => {
         navigation: {
             nextEl: '.certificates__next',
             prevEl: '.certificates__prev'
+        },
+        autoplay: {
+            delay: 5000,
         },
         breakpoints: {
             // when window width is >= 320px
