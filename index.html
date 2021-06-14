@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="15 лет в России и за рубежом, более 500 
+    объектов жилого и нежилого назначения, любые объемы работ от 
+    проектирования до готового сооружения.">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -20,18 +23,17 @@
             </a>
             <nav class="main-nav">
                 <ul class="main-nav__list">
-                    <li class="main-nav__item"><a>Главная</a></li>
-                    <li class="main-nav__item"><a data-id="about">О компании</a></li>
-                    <li class="main-nav__item"><a>Выполненные работы</a></li>
+                    <li class="main-nav__item"><a href="#about">О компании</a></li>
+                    <li class="main-nav__item"><a href="#projects">Выполненные работы</a></li>
                     <li class="main-nav__item"><a>Наши клиенты</a></li>
-                    <li class="main-nav__item"><a>Контакты</a></li>
+                    <li class="main-nav__item"><a>Наши клиенты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <h1 class="visually-hidden">Главная страница компании "Трансстрой"</h1>
-        <section class="promo">
+        <section class="promo _trigger-item">
             <div class="container">
                 <div class="promo__lead">
                     <h2 class="promo__title _anim-items _hide _anim-no-hide">Cтроительство, ремонт, реконструкция <span>под ключ</span></h2>
@@ -43,8 +45,7 @@
             </div>
         </section>
 
-        <!-- <div class="container"> -->
-        <section class="expertise container">
+        <section class="expertise container _trigger-item">
             <ul class="expertise__list">
                 <li class="expertise__item _anim-items hide-bottom-1 _anim-no-hide">
                     <img class="expertise__img" src="img/expertise/expertise-1.jpg" alt="">
@@ -75,7 +76,7 @@
             </ul>
         </section>
 
-        <section id="about" class="about">
+        <section id="about" class="about _trigger-item">
             <!-- <video class="about__video" loop muted autoplay src="video/promo_video.mp4"></video> -->
             <div class="about__blur">
                 <div class="container">
@@ -122,7 +123,7 @@
         </section>
 
         <section class="map container">
-            <img class="map__img" src="img/map/map.png" width="650" height="325" alt="Крарта россии">
+            <img class="map__img" src="img/map/map.jpg" width="650" height="325" alt="Крарта россии">
             <div class="map__pin _anim-items hide-top _anim-no-hide"></div>
             <div class="map__pin _anim-items hide-top _anim-no-hide"></div>
             <div class="map__pin _anim-items hide-top _anim-no-hide"></div>
@@ -210,13 +211,13 @@
                 <div class="team__card _anim-items hide-bottom-1 _anim-no-hide">
                     <img class="team__img" src="img/team/team-1.jpg" alt="">
                     <div class="team__content">
-                        <h3 class="team__subtitle subtitle team__subtitle--wheel">Собственные машины и механизмы</h3>
+                        <h3 class="team__subtitle subtitle team__subtitle--wheel">Собственные машины<br> и механизмы</h3>
                         <ul class="team__list">
                             <li class="team__item">Грузовики DAF гп. 10 тн</li>
                             <li class="team__item">Манипуляторы ISUZU гп. 5 тн</li>
                             <li class="team__item">Тракторы JCB 3 cx</li>
                             <li class="team__item">Тракторы Mustang (mini)</li>
-                            <li class="team__item">Автобусы грузопассажирские (знаки)</li>
+                            <li class="team__item">Автобусы грузопассажирские</li>
                         </ul>
                     </div>
                 </div>
@@ -308,7 +309,7 @@
             </section>
         </div>
 
-        <section class="projects container">
+        <section id="projects" class="projects container">
             <h2 class="projects__title title">Портфолио</h2>
             <ul class="projects__list">
                 <li class="projects__item _anim-items hide-left-22 _anim-no-hide">
@@ -494,7 +495,7 @@
         </section>
     </main>
     <footer class="main__footer"></footer>
-    <button id="btn">
+    <button id="btn-up">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.003 300.003">
             <g>
                 <g>
