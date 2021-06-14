@@ -196,14 +196,14 @@ img {
 
 .promo__title {
     font-weight: 800;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 40px;
+    line-height: 45px;
     text-transform: uppercase;
 }
 
 .promo__title span {
-    font-size: 30px;
-    line-height: 51px;
+    font-size: 50px;
+    line-height: 55px;
     color: rgb(252, 194, 13);
 }
 

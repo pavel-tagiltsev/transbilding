@@ -44,6 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
     // Navigation logic
 
     const anchors = document.querySelectorAll('a[href*="#"]');
@@ -142,6 +143,7 @@ window.addEventListener("DOMContentLoaded", () => {
         oldScrollY = scrolled;
     });
 
+    
     // Slider logic
 
     const swiper = new Swiper('#swiper', {
