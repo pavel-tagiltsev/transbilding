@@ -153,8 +153,8 @@ window.addEventListener("DOMContentLoaded", () => {
         direction: 'horizontal',
         slidesPerView: 3,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.other__next',
+            prevEl: '.other__prev'
         },
         breakpoints: {
             // when window width is >= 320px
@@ -182,10 +182,10 @@ window.addEventListener("DOMContentLoaded", () => {
         // spaceBetween: 100,
         direction: 'horizontal',
         slidesPerView: 3,
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev'
-        // },
+        navigation: {
+            nextEl: '.certificates__next',
+            prevEl: '.certificates__prev'
+        },
         breakpoints: {
             // when window width is >= 320px
             320: {
