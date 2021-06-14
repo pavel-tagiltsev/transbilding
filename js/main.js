@@ -143,10 +143,40 @@ window.addEventListener("DOMContentLoaded", () => {
         oldScrollY = scrolled;
     });
 
-    
+
     // Slider logic
 
     const swiper = new Swiper('#swiper', {
+        speed: 400,
+        // spaceBetween: 100,
+        direction: 'horizontal',
+        slidesPerView: 3,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 25
+            },
+
+            // when window width is >= 678px
+            678: {
+                slidesPerView: 2,
+                spaceBetween: 50
+            },
+
+            // when window width is >= 1300px
+            1300: {
+                slidesPerView: 3,
+                spaceBetween: 100
+            }
+        }
+    });
+
+    const swiper2 = new Swiper('#swiper-2', {
         speed: 400,
         // spaceBetween: 100,
         direction: 'horizontal',

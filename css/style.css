@@ -881,6 +881,33 @@ img {
     justify-content: space-between;
 }
 
+/* Certificates */
+
+.certificates {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.certificates__container {
+    width: 70%;
+
+}
+
+.certificates__title {
+    text-align: center;
+}
+
+
+.certificates__img {
+    width: 250px;
+    height: 300px;
+}
+
+.certificates .container {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Footer */
 
 .main__footer {
@@ -1255,4 +1282,3 @@ img {
     opacity: 1;
     transform: scale(1, 1);
 }
-
