@@ -840,12 +840,50 @@ img {
 .other__subtitle::before {
     position: absolute;
     content: '';
-    top: 0;
+    top: 10px;
     left: 0;
     width: 50px;
     height: 50px;
-    background-color: var(--gold);
+    background-repeat: no-repeat;
+    background-position: cover;
 }
+
+.other__subtitle--plug::before {
+    background-image: url("../img/other/plug.png");
+}
+
+.other__subtitle--gear::before {
+    background-image: url("../img/other/gear.png");
+}
+
+.other__subtitle--bulb::before {
+    background-image: url("../img/other/bulb.png");
+}
+
+.other__subtitle--paper::before {
+    background-image: url("../img/other/paper.png");
+}
+
+.other__subtitle--tower::before {
+    background-image: url("../img/other/tower.png");
+}
+
+.other__subtitle--shield::before {
+    background-image: url("../img/other/shield.png");
+}
+
+.other__subtitle--ammeter::before {
+    background-image: url("../img/other/ammeter.png");
+}
+
+.other__subtitle--microchip::before {
+    background-image: url("../img/other/microchip.png");
+}
+
+.other__subtitle--plug-2::before {
+    background-image: url("../img/other/plug-2.png");
+}
+
 
 .other__text {
     margin: 0;
