@@ -118,6 +118,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let oldScrollY = 0;
     const header = document.querySelector('.main-header');
+    document.body.style.marginTop = `${header.clientHeight}px`;
 
     window.addEventListener('scroll', function () {
 
@@ -134,10 +135,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
         if (dY < 0) {
             header.classList.add('header-fixed');
-            document.body.style.marginTop = `${header.clientHeight}px`;
+            // document.body.style.marginTop = `${header.clientHeight}px`;
         } else {
             header.classList.remove('header-fixed');
-            document.body.style.marginTop = '0px';
+            // document.body.style.marginTop = '0px';
         }
         
         hideHeader();
