@@ -516,7 +516,7 @@ img {
     position: relative;
     height: 100vh;
 
-    background-image: url("../img/shutter.jpg");
+    /* background-image: url("../img/shutter.jpg"); */
     background-color: var(--gold);
     background-repeat: no-repeat;
     background-size: cover;
@@ -735,7 +735,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    background-image: url('../img/Background.jpg');
+    /* background-image: url('../img/Background.jpg'); */
     background-repeat: no-repeat;
     background-position: 140px 330px;
     background-size: 65%;

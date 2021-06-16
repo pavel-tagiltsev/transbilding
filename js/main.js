@@ -246,6 +246,19 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // const img = document.querySelectorAll('img');
+
+    // for (let i = 0; i < img.length; i++) {
+    //     img[i].classList.add('b-lazy');
+    //     img[i].setAttribute('data-src', `${img[i].getAttribute('src')}`);
+    //     img[i].setAttribute('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+    // }
+    // console.log(img[2].getAttribute('data-src'));
+
+    var bLazy = new Blazy({
+        offset: 500
+    });
+
 });
 
 //    if (window.matchMedia("(max-width: 1180px)").matches) {
