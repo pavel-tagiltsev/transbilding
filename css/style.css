@@ -1048,10 +1048,27 @@ img {
 
 /* Footer */
 
-.main__footer {
-    min-height: 150px;
+.main-footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
     background-color: #115006;
+    color: var(--white);
 }
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-footer__adress {
+    margin: 0;
+}
+
+.main-footer__tel {
+    color: var(--white);
+}
+
+
 
 /* Button-up */
 
