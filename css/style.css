@@ -4,7 +4,7 @@
     --grey: #f6f4f4;
     --extra-yellow: #f0c52e;
     --white: #ffffff;
-  }
+}
 
 @font-face {
     font-family: 'Circe';
@@ -13,7 +13,7 @@
     src: local('Circe'),
         url('../fonts/Circe-Light.woff2') format('woff2'),
         url('../fonts/Circe-Light.woff') format('woff');
-    font-display: swap;   
+    font-display: swap;
 }
 
 @font-face {
@@ -159,8 +159,8 @@ img {
 
 .button {
     padding: 10px 20px;
-    background-color: rgb(252, 194, 13);
-    color: black;
+    background-color: #a68d5e;
+    color: var(--white);
     margin-right: 20px;
     text-transform: uppercase;
 }
@@ -176,6 +176,7 @@ img {
 
 /* Header */
 .main-header {
+    width: 100vw;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #fff;
@@ -187,8 +188,57 @@ img {
     justify-content: space-between;
 }
 
+.logo-link {
+    display: block;
+    margin-right: 100px;
+}
+
 .logo-img {
     display: block;
+    width: 269px;
+    height: 50px;
+}
+
+.main-nav__toggle {
+    position: absolute;
+    display: none;
+    top: 15px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.main-nav__toggle--opened::before,
+.main-nav__toggle--opened::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 19px;
+    width: 1.5px;
+    height: 24px;
+    background-color: #000000;
+}
+
+.main-nav__toggle--opened::before {
+    transform: rotate(45deg);
+}
+
+.main-nav__toggle--opened::after {
+    transform: rotate(-45deg);
+}
+
+.main-nav__toggle--closed::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 19px;
+    width: 1.5px;
+    height: 24px;
+    background-color: #000000;
+    transform: rotate(90deg);
+    box-shadow: 5px 0 0 0 #000000, 10px 0 0 0 #000000;
 }
 
 .main-nav__list {
@@ -199,8 +249,11 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 800px;
     min-height: 50px;
+}
+
+.main-nav--hidden {
+    display: none;
 }
 
 .main-nav__item {
@@ -443,7 +496,7 @@ img {
 }
 
 .experitse__text--engine::after {
-    background-image: url('../img/icons/еngine.svg'); 
+    background-image: url('../img/icons/еngine.svg');
 }
 
 .experitse_text--pipe::after {
@@ -583,13 +636,17 @@ img {
 
 .team {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     background-color: var(--grey);
 }
 
 .team__title {
-    padding-left: 60px;
     margin-bottom: 20px;
+}
+
+.team__title::after {
+    height: 700px;
+    z-index: 1;
 }
 
 .team__wrapper {
@@ -678,7 +735,7 @@ img {
     align-items: baseline;
     background-image: url('../img/Background.jpg');
     background-repeat: no-repeat;
-    background-position: 140px 300px;
+    background-position: 140px 365px;
     background-size: 65%;
     overflow: hidden;
 }
@@ -715,6 +772,11 @@ img {
     background-color: var(--gold);
 }
 
+.design {
+    padding-bottom: 100px;
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
 .design__title {
     position: relative;
     padding: 10px;
@@ -745,10 +807,20 @@ img {
 .design__list {
     padding-left: 25px;
 }
+
 .design__list {
     position: relative;
     border-left: 2px solid var(--gold);
-    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.design__list::before {
+    content: '';
+    position: absolute;
+    bottom: -110px;
+    left: -2px;
+    width: 2px;
+    height: 100px;
+    background-color: var(--gold);
 }
 
 .design__list:after {
@@ -769,9 +841,13 @@ img {
 /* Projects */
 
 .projects {
-    padding-top: 60px;
+    margin-top: -25px;
     padding-bottom: 60px;
     overflow: hidden;
+}
+
+.projects__title {
+    margin-left: 64.7%;
 }
 
 .projects__list {
@@ -851,14 +927,14 @@ img {
     padding: 20px;
     margin-left: 50px;
     margin-bottom: 30px;
-  }
-  
+}
+
 .competence__item::before {
     position: absolute;
     top: 40px;
     left: -30px;
     counter-increment: myCounter;
-    content:counter(myCounter);
+    content: counter(myCounter);
     color: var(--gold);
     width: 40px;
     height: 40px;
@@ -1035,7 +1111,7 @@ img {
     width: 204px;
     height: 300px;
     border: 2px solid var(--gold);
-    transition: all 0.5s ease 0s;  
+    transition: all 0.5s ease 0s;
 }
 
 .certificates__item:hover {
@@ -1090,7 +1166,7 @@ img {
     fill: var(--gold);
 }
 
-.button-up:hover path{
+.button-up:hover path {
     fill: gold;
 }
 
@@ -1100,7 +1176,7 @@ img {
 .header-hide {
     transform: translate(0, -500px);
     opacity: 0;
-    transition: all 0.5s ease 0s;  
+    transition: all 0.5s ease 0s;
 }
 
 .header-fixed {

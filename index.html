@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- <video class="about__video" loop muted autoplay src="video/promo_video.mp4"></video> -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
     <title>Трансстрой</title>
 </head>
 
@@ -23,19 +24,21 @@
                     alt="Логотип компании Трансстрой">
             </a>
             <nav class="main-nav">
+                <button class="main-nav__toggle main-nav__toggle--closed no--js" type="button"
+                    aria-label="Открыть меню"></button>
                 <ul class="main-nav__list">
-                    <li class="main-nav__item"><a href="#about">О компании</a></li>
-                    <li class="main-nav__item"><a href="#team">Команда и ресурсы</a></li>
-                    <li class="main-nav__item"><a href="#other">Виды работ</a></li>
-                    <li class="main-nav__item"><a href="#projects">Портфолио</a></li>
-                    <li class="main-nav__item"><a href="#competence">Наши компетенции</a></li>
-                    <!-- <li class="main-nav__item"><a href="#partners">Наши партнеры</a></li>
-                    <li class="main-nav__item"><a href="#certificates">Сертификаты</a></li> -->
+                    <li class="main-nav__item"><a class="main-nav__link" href="#about">О компании</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#team">Команда и ресурсы</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#other">Виды работ</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#projects">Портфолио</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#competence">Наши компетенции</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
+
+
+     <main>
         <h1 class="visually-hidden">Главная страница компании "Трансстрой"</h1>
         <section class="promo _trigger-item">
             <div class="container">
@@ -89,7 +92,6 @@
         </section>
 
         <section id="about" class="about _trigger-item">
-            <!-- <video class="about__video" loop muted autoplay src="video/promo_video.mp4"></video> -->
             <div class="about__blur">
                 <div class="container">
                     <div class="about__content _anim-items _hide-about">
@@ -375,12 +377,6 @@
                         <h3 class="projects_subtitle">Центр репродукции «Линия жизни».</h3>
                     </a>
                 </li>
-                <li class="projects__item _anim-items _hide-portfolio-left-2">
-                    <img class="projects__img" src="img/projects/химки.jpg" alt="Контактное изображение">
-                    <a class="projects__link" href="#">
-                        <h3 class="projects_subtitle">Предприятия  быстрого общественного питания и торговли.</h3>
-                    </a>
-                </li>
             </ul>
         </section>
 
@@ -544,12 +540,11 @@
         <section id="partners" class="partners container">
             <h2 class="partners__title title">Наши партнеры</h2>
             <ul class="partners__list">
-                <li class="partners__item"><img src="img/expertise/expertise-1.jpg" alt="Логотип компании"></li>
-                <li class="partners__item"><img src="img/expertise/expertise-2.jpg" alt="Логотип компании"></li>
-                <li class="partners__item"><img src="img/expertise/expertise-3.jpg" alt="Логотип компании"></li>
-                <li class="partners__item"><img src="img/expertise/expertise-4.jpg" alt="Логотип компании"></li>
-                <li class="partners__item"><img src="img/expertise/expertise-1.jpg" alt="Логотип компании"></li>
-                <li class="partners__item"><img src="img/expertise/expertise-2.jpg" alt="Логотип компании"></li>
+                <li class="partners__item"><img src="img/partners/partners-1.jpg" alt="Логотип компании"></li>
+                <li class="partners__item"><img src="img/partners/partners-2.png" alt="Логотип компании"></li>
+                <li class="partners__item"><img src="img/partners/partners-3.jpg" alt="Логотип компании"></li>
+                <li class="partners__item"><img src="img/partners/partners-4.png" alt="Логотип компании"></li>
+                <li class="partners__item"><img src="img/partners/partners-5.jpg" alt="Логотип компании"></li>
             </ul>
         </section>
 
