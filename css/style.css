@@ -101,6 +101,23 @@ img {
     text-transform: uppercase;
 }
 
+.button {
+    padding: 10px 20px;
+    background-color: rgb(252, 194, 13);
+    color: black;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.button:hover,
+.button:focus {
+    background-color: rgb(255, 215, 94);
+}
+
+.button:active {
+    background-color: rgb(252, 194, 13);
+}
+
 /* Header */
 .main-header {
     padding-top: 10px;
@@ -149,11 +166,10 @@ img {
     cursor: pointer;
 }
 
-.main-nav__item a:focus,
+/* .main-nav__item a:focus,
 .main-nav__item a:hover {
     color: var(--gold);
-
-}
+} */
 
 .main-nav__item a::after {
     position: absolute;
@@ -211,6 +227,7 @@ img {
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 30px;
 }
 
 .promo__img {
@@ -440,8 +457,7 @@ img {
 
 .map {
     position: relative;
-    padding-top: 60px;
-    margin-bottom: 60px;
+    /* padding-top: 60px; */
 }
 
 .map__pin {
@@ -463,7 +479,7 @@ img {
 
 .map__content {
     position: absolute;
-    top: 80px;
+    top: 35px;
     right: 21px;
     width: 500px;
     z-index: 1;
@@ -530,7 +546,7 @@ img {
 
 .team__card {
     width: 300px;
-    min-height: 500px;
+    min-height: 400px;
     background-color: var(--white);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -547,8 +563,6 @@ img {
     object-position: 0 0;
 }
 
-
-
 .team__img {
     display: block;
     width: 100%;
@@ -558,7 +572,6 @@ img {
 
 .team__content {
     padding: 20px;
-    height: 50%;
 }
 
 .team__subtitle {
@@ -598,12 +611,15 @@ img {
     background-image: url('../img/icons/aerial-platform.svg');
 }
 
+.team__list {
+    margin-bottom: 0;
+}
+
 /* Design */
 
 .build-design__wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 60px;
     align-items: baseline;
     background-image: url('../img/Background.jpg');
     background-repeat: no-repeat;
@@ -725,11 +741,11 @@ img {
 }
 
 .projects__img:hover~.projects__link {
-    display: flex;
+    opacity: 1;
 }
 
 .projects__link {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -738,11 +754,15 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(199, 212, 114, 0.3);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    color: white;
+    transition: all 0.6s ease 0s;
 }
 
 .projects__link:hover {
-    display: flex;
+    opacity: 1;
 }
 
 .projects_subtitle {
@@ -760,7 +780,6 @@ img {
 .competence__title {
     margin: 0;
     margin-bottom: 60px;
-    text-align: center;
 }
 
 .competence__list {
@@ -781,8 +800,8 @@ img {
   
 .competence__item::before {
     position: absolute;
-    top: 20px;
-    left: -50px;
+    top: 40px;
+    left: -30px;
     counter-increment: myCounter;
     content:counter(myCounter);
     color: var(--gold);
@@ -811,7 +830,6 @@ img {
 .other__title {
     margin-top: 0;
     margin-bottom: 60px;
-    text-align: center;
 }
 
 .other__list {
@@ -941,13 +959,20 @@ img {
     padding-bottom: 60px;
 }
 
+.certificates .container {
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
 .certificates__container {
-    width: 74%;
+    width: 850px;
 
 }
 
 .certificates__title {
-    text-align: center;
+    margin: 0;
+    padding-left: 50px;
 }
 
 
@@ -962,14 +987,9 @@ img {
     opacity: 0.6;
 }
 
-.certificates .container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
 
 .certificates__next {
-    right: 415px;
+    right: 390px;
 }
 
 /* Footer */
@@ -1041,6 +1061,11 @@ img {
     transition: all 0.8s ease 0.5s;
 }
 
+._hide-button {
+    opacity: 0;
+    transition: all 0.8s ease 1.2s;
+}
+
 /* Expertise animation */
 ._hide-expertise-1 {
     transform: translate(0px, 25%);
@@ -1092,151 +1117,151 @@ img {
 }
 
 .map__pin:first-of-type {
-    top: 41%;
+    top: 35%;
     left: 10%;
     transition: all 1s ease 0.1s;
 }
 
 .map__pin:nth-of-type(2) {
-    top: 45.5%;
+    top: 39.5%;
     left: 9.5%;
     transition: all 1s ease 0.2s;
 }
 
 .map__pin:nth-of-type(3) {
-    top: 50%;
+    top: 44%;
     left: 9.5%;
     transition: all 1s ease 0.3s;
 }
 
 .map__pin:nth-of-type(4) {
-    top: 58%;
+    top: 54%;
     left: 5%;
     transition: all 1s ease 0.4s;
 }
 
 .map__pin:nth-of-type(5) {
-    top: 58%;
+    top: 53%;
     left: 8%;
     transition: all 1s ease 0.5s;
 }
 
 .map__pin:nth-of-type(6) {
-    top: 59%;
+    top: 53%;
     left: 12%;
     transition: all 1s ease 0.6s;
 }
 
 .map__pin:nth-of-type(7) {
-    top: 58.5%;
+    top: 54.5%;
     left: 15.5%;
     transition: all 1s ease 0.7s;
 }
 
 .map__pin:nth-of-type(8) {
-    top: 58.5%;
+    top: 54.5%;
     left: 19%;
     transition: all 1s ease 0.8s;
 }
 
 .map__pin:nth-of-type(9) {
-    top: 55.5%;
+    top: 51.5%;
     left: 21%;
     transition: all 1s ease 0.9s;
 }
 
 .map__pin:nth-of-type(10) {
-    top: 54.5%;
+    top: 50.5%;
     left: 18%;
     transition: all 1s ease 1s;
 }
 
 .map__pin:nth-of-type(11) {
-    top: 53.5%;
+    top: 48.5%;
     left: 15.5%;
     transition: all 1s ease 1.1s;
 }
 
 .map__pin:nth-of-type(12) {
-    top: 50%;
+    top: 45%;
     left: 16.5%;
     transition: all 1s ease 1.2s;
 }
 
 .map__pin:nth-of-type(13) {
-    top: 49.5%;
+    top: 44.5%;
     left: 18.5%;
     transition: all 1s ease 1.3s;
 }
 
 .map__pin:nth-of-type(14) {
-    top: 45%;
+    top: 39%;
     left: 16.5%;
     transition: all 1s ease 1.4s;
 }
 
 .map__pin:nth-of-type(15) {
-    top: 47%;
+    top: 42%;
     left: 14.5%;
     transition: all 1s ease 1.5s;
 }
 
 .map__pin:nth-of-type(16) {
-    top: 42%;
+    top: 36%;
     left: 14.5%;
     transition: all 1s ease 1.6s;
 }
 
 .map__pin:nth-of-type(17) {
-    top: 45%;
+    top: 39%;
     left: 13%;
     transition: all 1s ease 1.7s;
 }
 
 .map__pin:nth-of-type(18) {
-    top: 45.5%;
+    top: 40.5%;
     left: 11.5%;
     transition: all 1s ease 1.8s;
 }
 
 .map__pin:nth-of-type(19) {
-    top: 40.5%;
+    top: 35.5%;
     left: 12%;
     transition: all 1s ease 1.9s;
 }
 
 .map__pin:nth-of-type(20) {
-    top: 33.5%;
+    top: 27.5%;
     left: 15%;
     transition: all 1s ease 2s;
 }
 
 .map__pin:nth-of-type(21) {
-    top: 27.5%;
+    top: 21.5%;
     left: 17%;
     transition: all 1s ease 2.1s;
 }
 
 .map__pin:nth-of-type(22) {
-    top: 69.5%;
+    top: 65.5%;
     left: 35.5%;
     transition: all 1s ease 2.2s;
 }
 
 .map__pin:nth-of-type(23) {
-    top: 74.5%;
+    top: 70.5%;
     left: 39.5%;
     transition: all 1s ease 2.3s;
 }
 
 .map__pin:nth-of-type(24) {
-    top: 67.5%;
+    top: 63.5%;
     left: 42%;
     transition: all 1s ease 2.4s;
 }
 
 .map__pin:nth-of-type(25) {
-    top: 78.5%;
+    top: 74.5%;
     left: 44.5%;
     transition: all 1s ease 2.5s;
 }
