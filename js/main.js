@@ -182,7 +182,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const swiper2 = new Swiper('#swiper-certificates', {
         speed: 400,
-        // spaceBetween: 100,
+        spaceBetween: 100,
         direction: 'horizontal',
         slidesPerView: 3,
         navigation: {
@@ -192,25 +192,25 @@ window.addEventListener("DOMContentLoaded", () => {
         autoplay: {
             delay: 5000,
         },
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 25
-            },
+        // breakpoints: {
+        //     // when window width is >= 320px
+        //     320: {
+        //         slidesPerView: 1,
+        //         spaceBetween: 25
+        //     },
 
-            // when window width is >= 678px
-            678: {
-                slidesPerView: 2,
-                spaceBetween: 50
-            },
+        //     // when window width is >= 678px
+        //     678: {
+        //         slidesPerView: 2,
+        //         spaceBetween: 50
+        //     },
 
-            // when window width is >= 1300px
-            1300: {
-                slidesPerView: 3,
-                spaceBetween: 100
-            }
-        }
+        //     // when window width is >= 1300px
+        //     1300: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 100
+        //     }
+        // }
     });
 });
 
