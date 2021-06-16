@@ -348,8 +348,8 @@ img {
 
 /* Expertise */
 .expertise {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .expertise__list {
@@ -638,25 +638,24 @@ img {
 /* Team */
 
 .team {
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 30px;
     background-color: var(--grey);
 }
 
 .team__title {
+    margin: 0;
     margin-bottom: 20px;
 }
 
 .team__title::after {
-    height: 700px;
+    height: 650px;
     z-index: 1;
 }
 
 .team__wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 .team__card {
@@ -738,7 +737,7 @@ img {
     align-items: baseline;
     background-image: url('../img/Background.jpg');
     background-repeat: no-repeat;
-    background-position: 140px 365px;
+    background-position: 140px 330px;
     background-size: 65%;
     overflow: hidden;
 }
@@ -746,7 +745,6 @@ img {
 .building,
 .design {
     width: 445px;
-    padding: 30px 0;
 }
 
 .building__title {
@@ -1011,39 +1009,39 @@ img {
 }
 
 .other__subtitle--plug::before {
-    background-image: url("../img/other/plug.png");
+    background-image: url("../img/other/plug.svg");
 }
 
 .other__subtitle--gear::before {
-    background-image: url("../img/other/gear.png");
+    background-image: url("../img/other/gear.svg");
 }
 
 .other__subtitle--bulb::before {
-    background-image: url("../img/other/bulb.png");
+    background-image: url("../img/other/bulb.svg");
 }
 
 .other__subtitle--paper::before {
-    background-image: url("../img/other/paper.png");
+    background-image: url("../img/other/paper.svg");
 }
 
 .other__subtitle--tower::before {
-    background-image: url("../img/other/tower.png");
+    background-image: url("../img/other/tower.svg");
 }
 
 .other__subtitle--shield::before {
-    background-image: url("../img/other/shield.png");
+    background-image: url("../img/other/shield.svg");
 }
 
 .other__subtitle--ammeter::before {
-    background-image: url("../img/other/ammeter.png");
+    background-image: url("../img/other/ammeter.svg");
 }
 
 .other__subtitle--microchip::before {
-    background-image: url("../img/other/microchip.png");
+    background-image: url("../img/other/microchip.svg");
 }
 
 .other__subtitle--plug-2::before {
-    background-image: url("../img/other/plug-2.png");
+    background-image: url("../img/other/plug-2.svg");
 }
 
 
@@ -1093,17 +1091,38 @@ img {
     margin: 0;
     padding: 0;
     list-style: none;
-    width: 70%;
+    width: 850px;
 
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.partners__item img {
-    width: 100px;
+.partners__item:first-child img {
+    width: 117px;
     height: 50px;
 }
+
+.partners__item:nth-child(2) img {
+    width: 197px;
+    height: 50px;
+}
+
+.partners__item:nth-child(3) img {
+    width: 80px;
+    height: 50px;
+}
+
+.partners__item:nth-child(4) img {
+    width: 84px;
+    height: 50px;
+}
+
+.partners__item:nth-child(5) img {
+    width: 113px;
+    height: 50px;
+}
+
 
 /* Certificates */
 
@@ -1135,7 +1154,7 @@ img {
 }
 
 .certificates__img {
-    width: 204px;
+    width: 212px;
     height: 300px;
     border: 2px solid var(--gold);
     transition: all 0.5s ease 0s;

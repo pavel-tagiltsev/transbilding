@@ -152,7 +152,7 @@ window.addEventListener("DOMContentLoaded", () => {
         speed: 400,
         // spaceBetween: 100,
         direction: 'horizontal',
-        slidesPerView: 3,
+        // slidesPerView: 3,
         navigation: {
             nextEl: '.other__next',
             prevEl: '.other__prev'
