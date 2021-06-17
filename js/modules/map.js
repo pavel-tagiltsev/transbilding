@@ -1,12 +1,14 @@
 'use strict';
 
-window.addEventListener("DOMContentLoaded", () => {
-    // Map animation logic
+function mapAnimation(mapSelector) {
 
-    const map = document.querySelector('#map');
-    
-    let pinCoords = [
-        {
+    // To get right center
+    const MagicY = 26;
+    const MagicX = 12.5;
+
+    const map = document.querySelector(mapSelector);
+
+    let pinCoords = [{
             "x": 141,
             "y": 270
         },
@@ -108,61 +110,31 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    function setPin() {
-        // To get right center
-        const MagicY = 26;
-        const MagicX = 12.5;
-
-        function addZero(number) {
-            if (number < 10) {
-                return `0.${number}`;
-            } 
-    
-            if (number >= 10) {
-                return number / 10;
-            } 
-    
-            return number;
+    function addZero(number) {
+        if (number < 10) {
+            return `0.${number}`;
         }
 
-        for (let i = 0; i < pinCoords.length; i++) {
-            const pin = document.createElement('div');
-            pin.style = `
+        if (number >= 10) {
+            return number / 10;
+        }
+
+        return number;
+    }
+
+    for (let i = 0; i < pinCoords.length; i++) {
+        const pin = document.createElement('div');
+        pin.style = `
                 top: ${pinCoords[i].y - MagicY}px;
                 left: ${pinCoords[i].x - MagicX}px;
                 transition: all 1s ease ${addZero(i)}s;
             `;
-    
-            pin.classList.add('map__pin', '_anim-items', '_hide-pin');
-    
-            map.appendChild(pin);
-        }
+
+        pin.classList.add('map__pin', '_anim-items', '_hide-pin');
+
+        map.appendChild(pin);
     }
-
-    setPin();
-
-    // Helps to get coords
-
-    // function getCoords(sectionSelector) {
-    //     const section = document.querySelector(sectionSelector);
-    //     const arrCoords = [];
-    
-    //     section.addEventListener('click', (evt) => {
-    //         console.log((evt.pageX - section.offsetLeft) + ':' + (evt.pageY - section.offsetTop));
-    
-    //         let PinCoord = {
-    //             x: evt.pageX - section.offsetLeft,
-    //             y: evt.pageY - section.offsetTop
-    //         };
-    
-    //         arrCoords.push(PinCoord);
-    
-    //         console.log(arrCoords);
-    //     });
-    // }
-
-    // getCoords('#map');
-
-});
+}
 
 
+export default mapAnimation;
