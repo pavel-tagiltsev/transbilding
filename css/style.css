@@ -913,7 +913,7 @@ img {
 .competence {
     padding-top: 30px;
     background-color: var(--grey);
-    background-image: url('../img/competence-bg.png');
+    /* background-image: url('../img/competence-bg.png'); */
     background-repeat: no-repeat;
     background-position: calc(65vw - 10%) 159px;
     background-size: 600px;
