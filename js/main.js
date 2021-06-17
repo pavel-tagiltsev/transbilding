@@ -45,6 +45,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    // Fixed a bag with buttons
+    for (let i = 0; i < animItems.length; i++) {
+        if (animItems[i].getAttribute('href') == '#partners' || 
+        animItems[i].getAttribute('href') == '#certificates') {
+            animItems[i].style.transition = '300ms';
+        }
+    }
+
 
     // Navigation logic
 
@@ -157,9 +165,9 @@ window.addEventListener("DOMContentLoaded", () => {
             nextEl: '.other__next',
             prevEl: '.other__prev'
         },
-        autoplay: {
-            delay: 5000,
-        },
+        // autoplay: {
+        //     delay: 5000,
+        // },
         breakpoints: {
             // when window width is >= 320px
             320: {
@@ -176,7 +184,7 @@ window.addEventListener("DOMContentLoaded", () => {
             // when window width is >= 1300px
             1300: {
                 slidesPerView: 3,
-                spaceBetween: 100
+                spaceBetween: 50
             }
         }
     });
@@ -190,9 +198,9 @@ window.addEventListener("DOMContentLoaded", () => {
             nextEl: '.certificates__next',
             prevEl: '.certificates__prev'
         },
-        autoplay: {
-            delay: 5000,
-        },
+        // autoplay: {
+        //     delay: 5000,
+        // },
         // breakpoints: {
         //     // when window width is >= 320px
         //     320: {
