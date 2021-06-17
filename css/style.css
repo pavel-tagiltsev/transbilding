@@ -164,6 +164,7 @@ img {
     color: var(--white);
     margin-right: 20px;
     text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .button:hover,
