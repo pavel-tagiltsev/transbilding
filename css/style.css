@@ -906,6 +906,8 @@ img {
 
 .projects_subtitle {
     text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 /* Competence */
