@@ -1,6 +1,7 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", () => {
+    
 
     // Animation logic
 
@@ -35,7 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 if ((window.pageYOffset > animItemOffset - animItemPoint) &&
                     window.pageYOffset < (animItemOffset + animItemPoint)) {
                     animItem.classList.add('_active');
-                } 
+                }
             }
 
         };
@@ -47,8 +48,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Fixed a bag with buttons
     for (let i = 0; i < animItems.length; i++) {
-        if (animItems[i].getAttribute('href') == '#partners' || 
-        animItems[i].getAttribute('href') == '#certificates') {
+        if (animItems[i].getAttribute('href') == '#partners' ||
+            animItems[i].getAttribute('href') == '#certificates') {
             animItems[i].style.transition = '300ms';
         }
     }
@@ -148,9 +149,43 @@ window.addEventListener("DOMContentLoaded", () => {
             header.classList.remove('header-fixed');
             // document.body.style.marginTop = '0px';
         }
-        
+
         hideHeader();
         oldScrollY = scrolled;
+    });
+
+    
+    // Burger header logic
+    
+    const button = document.querySelector(".main-nav__toggle");
+    const list = document.querySelector(".main-nav__list");
+
+    // button.classList.remove("no--js");
+
+    window.addEventListener('resize', () => {
+
+        if (window.matchMedia("(min-width: 1180px)").matches) {
+            list.classList.remove("main-nav--hidden");
+        }
+        if (window.matchMedia("(max-width: 1180px)").matches) {
+            list.classList.add("main-nav--hidden");
+        }
+    });
+
+    if (window.matchMedia("(max-width: 1180px)").matches) {
+        list.classList.add("main-nav--hidden");
+    }
+
+    button.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        list.classList.toggle("main-nav--hidden");
+        if (button.classList.contains("main-nav__toggle--opened")) {
+            button.classList.remove("main-nav__toggle--opened");
+            button.classList.add("main-nav__toggle--closed");
+        } else {
+            button.classList.remove("main-nav__toggle--closed");
+            button.classList.add("main-nav__toggle--opened");
+        }
     });
 
 
@@ -222,51 +257,9 @@ window.addEventListener("DOMContentLoaded", () => {
         // }
     });
 
-    const button = document.querySelector(".main-nav__toggle");
-    const list = document.querySelector(".main-nav__list");
-
-    // button.classList.remove("no--js");
-
-    window.addEventListener('resize', () => {
-        
-        if (window.matchMedia("(min-width: 1180px)").matches) {
-            list.classList.remove("main-nav--hidden");
-        }
-        if (window.matchMedia("(max-width: 1180px)").matches) {
-            list.classList.add("main-nav--hidden");
-        }
-    });
-
-    if (window.matchMedia("(max-width: 1180px)").matches) {
-        list.classList.add("main-nav--hidden");
-    }
-    
-
-    button.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        list.classList.toggle("main-nav--hidden");
-        if (button.classList.contains("main-nav__toggle--opened")) {
-            button.classList.remove("main-nav__toggle--opened");
-            button.classList.add("main-nav__toggle--closed");
-        } else {
-            button.classList.remove("main-nav__toggle--closed");
-            button.classList.add("main-nav__toggle--opened");
-        }
-    });
-
-    // const img = document.querySelectorAll('img');
-
-    // for (let i = 0; i < img.length; i++) {
-    //     img[i].classList.add('b-lazy');
-    //     img[i].setAttribute('data-src', `${img[i].getAttribute('src')}`);
-    //     img[i].setAttribute('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
-    // }
-    // console.log(img[2].getAttribute('data-src'));
-
     var bLazy = new Blazy({
         offset: 500
     });
-
 });
 
 //    if (window.matchMedia("(max-width: 1180px)").matches) {
