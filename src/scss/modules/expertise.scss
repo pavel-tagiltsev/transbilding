@@ -26,7 +26,7 @@
   }
 
   @media (max-width: 660px) {
-    margin-bottom: 10px;
+    margin-bottom: 0;
     width: 50%;
     height: 460px;
   }
@@ -165,6 +165,13 @@
 
   &--manhole::after {
     background-image: url("../img/manhole.svg");
+
+    @media (max-width: 420px) {
+      right: -60px;
+      top: 20px;
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &--pipe-closed::after {
@@ -180,13 +187,22 @@
     }
 
     @media (max-width: 420px) {
-      right: 20px;
-      top: 25px;
+      right: -80px;
+      top: 0;
+      width: 120px;
+      height: 120px;
     }
   }
 
   &--traffic-cone::after {
     background-image: url("../img/traffic-cone.svg");
+
+    @media (max-width: 420px) {
+      right: -60px;
+      top: 40px;
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--electricity::after {
@@ -198,17 +214,26 @@
 
     @media (max-width: 660px) {
       right: 0;
-      top: 0;
+      top: 10px;
     }
 
     @media (max-width: 420px) {
-      right: 20px;
-      top: 10px;
+      right: -80px;
+      top: 15px;
+      width: 100px;
+      height: 100px;
     }
   }
 
   &--engine::after {
     background-image: url("../img/еngine.svg");
+
+    @media (max-width: 420px) {
+      right: -80px;
+      top: 25px;
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &--pipe::after {
@@ -222,6 +247,18 @@
       right: -10px;
       top: 25px;
     }
+
+    @media (max-width: 420px) {
+      right: -80px;
+      top: 25px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    width: 240px;
+    height: auto;
   }
 }
 
@@ -294,5 +331,17 @@
     left: 0;
     width: 1px;
     height: 132px;
+  }
+
+  .expertise__item:nth-child(even)::before {
+    bottom: 32.5%;
+  }
+
+  .expertise__item:nth-child(5)::before {
+    top: 55.7%;
+  }
+
+  .expertise__item:nth-child(3)::before {
+    top: 62.7%;
   }
 }

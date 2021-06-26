@@ -135,6 +135,7 @@ function scrollAnimation() {
 
     triggerActivePointByScroll(animExpertises, 4, ExpertiseAnimationBreakpoints);
 
+
     for (let index = 0; index < animItems.length; index++) {
 
       const animItem = animItems[index];
