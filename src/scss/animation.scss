@@ -12,12 +12,6 @@
 }
 
 /* Promo animation */
-._hide-builder {
-  opacity: 0;
-  transform: translate(0, 70%);
-  transition: all 0.8s ease 0s;
-}
-
 ._hide-title {
   opacity: 0;
   transform: translate(0, 120%);
@@ -200,4 +194,5 @@
   opacity: 1;
   transform: translate(0, 0);
   transform: scale(1, 1);
+
 }

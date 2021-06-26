@@ -1,5 +1,5 @@
 .promo {
-  height: 100vh;
+  min-height: 100vh;
   color: $white;
   background-image: url("../img/hd-bg.jpg");
   background-size: cover;
@@ -10,15 +10,17 @@
 .promo__wrapper {
   display: flex;
   justify-content: flex-end;
-  height: 100vh;
+  min-height: 100%;
 }
 
 .promo__lead {
   align-self: center;
-  width: 500px;
+  padding-top: 150px;
+  padding-bottom: 100px;
   min-height: 300px;
+  max-width: 500px;
 
-  @media (max-width: 660px) {
+  @media (max-width: 800px) {
     max-width: 320px;
   }
 }
@@ -29,7 +31,7 @@
   line-height: 45px;
   text-transform: uppercase;
 
-  @media (max-width: 660px) {
+  @media (max-width: 800px) {
     font-size: 25px;
     line-height: 30px;
   }
@@ -40,7 +42,7 @@
   line-height: 55px;
   color: #a68d5e;
 
-  @media (max-width: 660px) {
+  @media (max-width: 800px) {
     font-size: 35px;
     line-height: 45px;
   }
@@ -52,7 +54,7 @@
   font-size: 20px;
   line-height: 30px;
 
-  @media (max-width: 660px) {
+  @media (max-width: 800px) {
     font-size: 15px;
     line-height: 20px;
   }
