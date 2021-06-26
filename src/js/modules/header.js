@@ -16,10 +16,12 @@ function fixedHeader() {
       const button = document.querySelector(".main-nav__toggle");
       const list = document.querySelector(".main-nav__list");
 
-      list.classList.add("main-nav__list--hidden");
-      if (button.classList.contains('main-nav__toggle--opened')) {
-        button.classList.add("main-nav__toggle--closed");
-        button.classList.remove("main-nav__toggle--opened");
+      if (document.documentElement.clientWidth < 1180) {
+        list.classList.add("main-nav__list--hidden");
+        if (button.classList.contains('main-nav__toggle--opened')) {
+          button.classList.add("main-nav__toggle--closed");
+          button.classList.remove("main-nav__toggle--opened");
+        }
       }
     }
 
