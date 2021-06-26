@@ -21,9 +21,9 @@ new Blazy({});
 window.addEventListener("DOMContentLoaded", () => {
 
     // Modules
-    mapAnimation('#map');
+    // mapAnimation('#map');
     scrollAnimation();
-    pageNavigate();
+    // pageNavigate();
     fixedHeader();
     listToggle();
 

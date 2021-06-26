@@ -1,5 +1,5 @@
 .promo {
-  height: 91vh;
+  height: 100vh;
   color: $white;
   background-image: url("../img/hd-bg.jpg");
   background-size: cover;
@@ -7,16 +7,20 @@
   background-color: #115006;
 }
 
-.promo .container {
+.promo__wrapper {
   display: flex;
   justify-content: flex-end;
-  height: 91vh;
+  height: 100vh;
 }
 
 .promo__lead {
   align-self: center;
   width: 500px;
   min-height: 300px;
+
+  @media (max-width: 660px) {
+    max-width: 320px;
+  }
 }
 
 .promo__title {
@@ -24,12 +28,22 @@
   font-size: 40px;
   line-height: 45px;
   text-transform: uppercase;
+
+  @media (max-width: 660px) {
+    font-size: 25px;
+    line-height: 30px;
+  }
 }
 
 .promo__title span {
   font-size: 50px;
   line-height: 55px;
   color: #a68d5e;
+
+  @media (max-width: 660px) {
+    font-size: 35px;
+    line-height: 45px;
+  }
 }
 
 .promo__text {
@@ -37,9 +51,9 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-}
 
-.promo__img {
-  align-self: bottom;
-  width: 45%;
+  @media (max-width: 660px) {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }

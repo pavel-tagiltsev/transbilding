@@ -3,8 +3,8 @@
 function mapAnimation(mapSelector) {
 
     // To get right center
-    const MagicY = 26;
-    const MagicX = 12.5;
+    const MagicY = 5;
+    const MagicX = 1.5;
 
     const map = document.querySelector(mapSelector);
 
@@ -110,6 +110,11 @@ function mapAnimation(mapSelector) {
         }
     ];
 
+    pinCoords.map(obj => {
+      obj.x = 100 * obj.x / 1260;
+      obj.y = 100 * obj.y / 674;
+      });
+
     function addZero(number) {
         if (number < 10) {
             return `0.${number}`;
@@ -125,8 +130,8 @@ function mapAnimation(mapSelector) {
     for (let i = 0; i < pinCoords.length; i++) {
         const pin = document.createElement('div');
         pin.style = `
-                top: ${pinCoords[i].y - MagicY}px;
-                left: ${pinCoords[i].x - MagicX}px;
+                top: ${pinCoords[i].y - MagicY}%;
+                left: ${pinCoords[i].x - MagicX}%;
                 transition: all 1s ease ${addZero(i)}s;
             `;
 

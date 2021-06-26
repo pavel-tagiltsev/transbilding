@@ -40,7 +40,7 @@ function scrollAnimation() {
 
          // Fixed a bag with buttons
         for (let i = 0; i < animItems.length; i++) {
-            if (animItems[i].getAttribute('href') == '#partners' ||
+            if (animItems[i].getAttribute('href') == '#partners' &&
                 animItems[i].getAttribute('href') == '#certificates') {
                 animItems[i].style.transition = '300ms';
             }

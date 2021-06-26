@@ -7,21 +7,40 @@
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
+  background-color: $white;
+
+  @media (max-width: 1180px) {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
 }
 
-.main-header .container {
+.main-header__wrapper {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1180px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .main-header__logo-link {
   display: block;
-  margin-right: 100px;
+
+  @media (max-width: 1180px) {
+    margin-bottom: 20px;
+  }
 }
 
 .main-header__logo-img {
   display: block;
   width: 269px;
   height: 50px;
+
+  @media (max-width: 660px) {
+    width: 180px;
+    height: 40px;
+  }
 }

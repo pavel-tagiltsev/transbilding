@@ -1,7 +1,6 @@
 'use strict';
 
   // Helps to get coords
-
 function getCoords(sectionSelector) {
     const section = document.querySelector(sectionSelector);
     const arrCoords = [];
@@ -21,9 +20,3 @@ function getCoords(sectionSelector) {
 }
 
 export default getCoords;
-
-//    if (window.matchMedia("(max-width: 1180px)").matches) {
-//         ... ваша логика
-//         которая не станет выполняться
-//         если размер больше 540px
-//     }
