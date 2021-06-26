@@ -1,6 +1,10 @@
 .expertise {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @media (max-width: 660px) {
+    padding-bottom: 60px;
+  }
 }
 
 .expertise__list {
@@ -167,7 +171,7 @@
     background-image: url("../img/manhole.svg");
 
     @media (max-width: 420px) {
-      right: -60px;
+      right: -40px;
       top: 20px;
       width: 100px;
       height: 100px;
@@ -187,8 +191,8 @@
     }
 
     @media (max-width: 420px) {
-      right: -80px;
-      top: 0;
+      right: -40px;
+      top: -20px;
       width: 120px;
       height: 120px;
     }
@@ -198,8 +202,8 @@
     background-image: url("../img/traffic-cone.svg");
 
     @media (max-width: 420px) {
-      right: -60px;
-      top: 40px;
+      right: -40px;
+      top: 20px;
       width: 80px;
       height: 80px;
     }
@@ -218,8 +222,8 @@
     }
 
     @media (max-width: 420px) {
-      right: -80px;
-      top: 15px;
+      right: -40px;
+      top: 10px;
       width: 100px;
       height: 100px;
     }
@@ -229,8 +233,8 @@
     background-image: url("../img/еngine.svg");
 
     @media (max-width: 420px) {
-      right: -80px;
-      top: 25px;
+      right: -40px;
+      top: 10px;
       width: 100px;
       height: 100px;
     }
@@ -249,8 +253,8 @@
     }
 
     @media (max-width: 420px) {
-      right: -80px;
-      top: 25px;
+      right: -40px;
+      top: 20px;
       width: 100px;
       height: 100px;
     }

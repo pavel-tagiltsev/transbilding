@@ -1,10 +1,8 @@
 .about {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-
-  /* background-image: url("../img/shutter.jpg"); */
   background-color: $gold;
 }
 
@@ -14,8 +12,6 @@
   padding-bottom: 100px;
   width: 100%;
   height: 100%;
-
-  /* background-color: rgba(240, 211, 84, 0.3); */
 }
 
 .about__video {
@@ -50,4 +46,51 @@
   padding-left: 17px;
   font-size: 14px;
   line-height: 20px;
+}
+
+@media (max-width: 660px) {
+  .about__content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .button {
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  .about {
+    height: 700px;
+  }
+
+  .about__blur {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .about__content {
+    padding: 20px;
+  }
+
+  .about__title {
+    margin-left: 0;
+  }
+
+  .about__subtitle {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .about__text,
+  .about__item {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
