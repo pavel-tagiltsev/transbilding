@@ -1,0 +1,27 @@
+.main-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header__logo-link {
+  display: block;
+  margin-right: 100px;
+}
+
+.main-header__logo-img {
+  display: block;
+  width: 269px;
+  height: 50px;
+}

@@ -1,0 +1,55 @@
+.map {
+  position: relative;
+}
+
+.map__img {
+  width: 100%;
+  height: 100%;
+  object-position: 0 0;
+}
+
+.map__content {
+  position: absolute;
+  right: 21px;
+  top: 35px;
+  z-index: 1;
+  width: 500px;
+}
+
+.map__inner {
+  display: flex;
+  border: 2px solid $gold;
+  padding: 50px 20px 20px 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.map__title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: -35px;
+  margin-left: 1px;
+  padding: 0 20px;
+  width: 220px;
+  background-color: $white;
+}
+
+.map__title::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -60px;
+  width: 2px;
+  height: 140px;
+  background-color: $gold;
+}
+
+.map__list-area,
+.map__list-country-start,
+.map__list-coutry-end {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.map__list-area {
+  margin-bottom: 20px;
+}

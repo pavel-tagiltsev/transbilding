@@ -1,0 +1,21 @@
+.button-up {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 50;
+  border: none;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  transform: scale(0);
+  transition: 0.34s linear;
+  cursor: pointer;
+}
+
+.button-up path {
+  fill: $gold;
+}
+
+.button-up:hover path {
+  fill: gold;
+}

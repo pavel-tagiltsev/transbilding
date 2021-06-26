@@ -1,0 +1,40 @@
+.partners {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: $grey;
+}
+
+.partners .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partners__title {
+  margin: 0;
+  padding: 10px;
+  width: 350px;
+}
+
+.partners__title::after {
+  height: 289px;
+}
+
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 850px;
+}
+
+.partners__item {
+  width: 150px;
+}
+
+.partners__item img {
+  width: 100%;
+}

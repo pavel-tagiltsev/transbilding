@@ -1,0 +1,54 @@
+.competence {
+  padding-top: 30px;
+  background-position: calc(65vw - 10%) 159px;
+  background-size: 600px;
+
+  /* background-image: url('../img/competence-bg.png'); */
+  background-repeat: no-repeat;
+  background-color: $grey;
+}
+
+.competence__title {
+  margin: 0;
+}
+
+.competence__title::after {
+  height: 500px;
+}
+
+.competence__list {
+  counter-reset: myCounter;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.competence__item {
+  position: relative;
+  list-style: none;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  padding: 20px;
+  width: 350px;
+}
+
+.competence__item::before {
+  counter-increment: myCounter;
+  content: counter(myCounter);
+  position: absolute;
+  left: -30px;
+  top: 40px;
+  width: 40px;
+  height: 40px;
+  font-weight: 300;
+  font-size: 70px;
+  color: $gold;
+}
+
+.competence__subtitle {
+  display: inline;
+  font-size: 14px;
+}
+
+.competence__text {
+  display: inline;
+}

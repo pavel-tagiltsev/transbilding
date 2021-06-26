@@ -1,0 +1,62 @@
+.title {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.title--1 {
+  position: relative;
+  display: inline-block;
+  border: 2px solid $gold;
+  padding: 10px;
+  padding-right: 150px;
+}
+
+.title--1::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 70%;
+  height: 2px;
+  background-color: $white;
+}
+
+.title--1::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -70px;
+  width: 2px;
+  height: 125px;
+  background-color: $gold;
+}
+
+.title--2 {
+  position: relative;
+  display: inline-block;
+  border: 2px solid $gold;
+  padding: 10px;
+  padding-right: 200px;
+}
+
+.title--2::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  width: 70%;
+  height: 2px;
+  background-color: $grey;
+}
+
+.title--2::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -1px;
+  width: 2px;
+  height: 547px;
+  background-color: $gold;
+}
