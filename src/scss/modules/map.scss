@@ -1,10 +1,15 @@
 .map {
   position: relative;
 
+  @media (max-width: 1200px) {
+    margin-bottom: 60px;
+  }
+
   @media (max-width: 660px) {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    margin-bottom: 60px;
   }
 }
 
@@ -31,7 +36,7 @@
   }
 
   @media (max-width: 660px) {
-    width: 85%;
+    width: 100%;
   }
 }
 

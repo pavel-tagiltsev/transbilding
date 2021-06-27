@@ -15,8 +15,19 @@
 }
 
 .team__title::after {
-  z-index: 1;
   height: 650px;
+
+  @media (max-width: 1300px) {
+    height: 1100px;
+  }
+
+  @media (max-width: 767px) {
+    height: 2000px;
+  }
+
+  @media (max-width: 335px) {
+    height: 2100px;
+  }
 }
 
 .team__wrapper {

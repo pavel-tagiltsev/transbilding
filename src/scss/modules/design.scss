@@ -8,11 +8,27 @@
 
   /* background-image: url('../img/Background.jpg'); */
   background-repeat: no-repeat;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    background-position: 100% 350px;
+    background-size: 450px;
+  }
 }
 
 .building,
 .design {
   width: 445px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.building {
+  @media (max-width: 1000px) {
+    margin-bottom: 100px;
+  }
 }
 
 .building__title {
@@ -25,9 +41,9 @@
   content: "";
   position: absolute;
   left: -2px;
-  top: -2px;
+  top: -4px;
   width: 70%;
-  height: 2px;
+  height: 5px;
   background-color: $white;
 }
 
@@ -37,7 +53,7 @@
   left: -2px;
   top: -60px;
   width: 2px;
-  height: 115px;
+  height: 110px;
   background-color: $gold;
 }
 
@@ -45,6 +61,10 @@
   position: relative;
   padding-bottom: 100px;
   background-color: rgba(255, 255, 255, 0.8);
+
+  @media (max-width: 1000px) {
+    align-self: flex-end;
+  }
 }
 
 .design::before {
@@ -55,6 +75,18 @@
   width: 2px;
   height: 685px;
   background-color: $gold;
+
+  @media (max-width: 480px) {
+    bottom: 20px;
+  }
+
+  @media (max-width: 420px) {
+    bottom: 5px;
+  }
+
+  @media (max-width: 360px) {
+    bottom: 80px;
+  }
 }
 
 .design__title {
@@ -67,9 +99,9 @@
   content: "";
   position: absolute;
   left: -2px;
-  bottom: -2px;
+  bottom: -4px;
   width: 70%;
-  height: 2px;
+  height: 5px;
   background-color: $white;
 }
 
@@ -86,17 +118,12 @@
 .building__list,
 .design__list {
   padding-left: 25px;
-}
 
-/* .design__list:after {
-    content: '';
-    position: absolute;
-    bottom: -60px;
-    left: -2px;
-    width: 2px;
-    height: 60px;
-    background-color: $gold;
-} */
+  @media (max-width: 420px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 
 .building__item,
 .design__item {

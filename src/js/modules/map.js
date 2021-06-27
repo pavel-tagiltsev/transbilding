@@ -4,7 +4,7 @@ function mapAnimation(mapSelector) {
 
   // To get right center
   let MagicY = 5;
-  let MagicX = 3;
+  let MagicX = 2.5;
 
   // if (document.documentElement.clientWidth < 1000) {
   //   MagicY = 5;
