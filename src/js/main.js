@@ -5,7 +5,7 @@ import '../index.html';
 
 // Modules
 import scrollAnimation from './modules/animation';
-// import mapAnimation from './modules/map';
+import mapAnimation from './modules/map';
 // import pageNavigate from './modules/navigation';
 import fixedHeader from './modules/header';
 import listToggle from './modules/burger';
@@ -21,7 +21,7 @@ new Blazy({});
 window.addEventListener("DOMContentLoaded", () => {
 
     // Modules
-    // mapAnimation('#map');
+    mapAnimation('#map');
     scrollAnimation();
     // pageNavigate();
     fixedHeader();

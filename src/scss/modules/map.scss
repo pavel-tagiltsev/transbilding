@@ -53,3 +53,57 @@
 .map__list-area {
   margin-bottom: 20px;
 }
+
+// @media (max-width: 660px) {
+//   .title {
+//     font-size: 24px;
+//     line-height: 30px;
+//   }
+
+//   .button {
+//     padding: 10px;
+//     font-size: 10px;
+//   }
+
+//   .map__img {
+//     display: none;
+//   }
+
+//   .map__content {
+//     position: static;
+//     margin-top: 60px;
+//     width: 100%;
+//   }
+
+//   .map__inner {
+//     flex-wrap: wrap;
+//   }
+// }
+
+@media (max-width: 1000px) {
+  .map__content {
+    position: absolute;
+    left: 20px;
+    top: 80%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 660px) {
+  .map {
+    margin-top: 30px;
+  }
+
+  .map__content {
+    position: absolute;
+    left: 20px;
+    top: 120%;
+    width: 85%;
+    // font-size: 12px;
+    // line-height: 16px;
+  }
+
+  .map__inner {
+    flex-direction: column;
+  }
+}

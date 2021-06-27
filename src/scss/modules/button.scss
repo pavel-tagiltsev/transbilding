@@ -6,6 +6,11 @@
   text-transform: uppercase;
   color: $white;
   background-color: #a68d5e;
+
+  @media (max-width: 420px) {
+    padding: 10px;
+    font-size: 10px;
+  }
 }
 
 .button:hover,
