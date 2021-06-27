@@ -1,5 +1,15 @@
 .map {
   position: relative;
+
+  @media (max-width: 660px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
+
+.map__wrapper {
+  position: relative;
 }
 
 .map__img {
@@ -14,6 +24,15 @@
   top: 35px;
   z-index: 1;
   width: 500px;
+
+  @media (max-width: 1000px) {
+    position: static;
+    width: 80%;
+  }
+
+  @media (max-width: 660px) {
+    width: 85%;
+  }
 }
 
 .map__inner {
@@ -21,6 +40,10 @@
   border: 2px solid $gold;
   padding: 50px 20px 20px 30px;
   background-color: rgba(255, 255, 255, 0.8);
+
+  @media (max-width: 660px) {
+    flex-direction: column;
+  }
 }
 
 .map__title {
@@ -52,58 +75,4 @@
 
 .map__list-area {
   margin-bottom: 20px;
-}
-
-// @media (max-width: 660px) {
-//   .title {
-//     font-size: 24px;
-//     line-height: 30px;
-//   }
-
-//   .button {
-//     padding: 10px;
-//     font-size: 10px;
-//   }
-
-//   .map__img {
-//     display: none;
-//   }
-
-//   .map__content {
-//     position: static;
-//     margin-top: 60px;
-//     width: 100%;
-//   }
-
-//   .map__inner {
-//     flex-wrap: wrap;
-//   }
-// }
-
-@media (max-width: 1000px) {
-  .map__content {
-    position: absolute;
-    left: 20px;
-    top: 80%;
-    width: 80%;
-  }
-}
-
-@media (max-width: 660px) {
-  .map {
-    margin-top: 30px;
-  }
-
-  .map__content {
-    position: absolute;
-    left: 20px;
-    top: 120%;
-    width: 85%;
-    // font-size: 12px;
-    // line-height: 16px;
-  }
-
-  .map__inner {
-    flex-direction: column;
-  }
 }

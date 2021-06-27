@@ -4,27 +4,27 @@ function mapAnimation(mapSelector) {
 
   // To get right center
   let MagicY = 5;
-  let MagicX = 1.5;
+  let MagicX = 3;
 
-  if (document.documentElement.clientWidth < 1000) {
-    MagicY = 5;
-    MagicX = 1;
-  }
+  // if (document.documentElement.clientWidth < 1000) {
+  //   MagicY = 5;
+  //   MagicX = 1;
+  // }
 
-  if (document.documentElement.clientWidth < 900) {
-    MagicY = 5;
-    MagicX = 0.5;
-  }
+  // if (document.documentElement.clientWidth < 900) {
+  //   MagicY = 5;
+  //   MagicX = 0.5;
+  // }
 
-  if (document.documentElement.clientWidth < 660) {
-    MagicY = 5;
-    MagicX = -0.2;
-  }
+  // if (document.documentElement.clientWidth < 660) {
+  //   MagicY = 5;
+  //   MagicX = -0.2;
+  // }
 
-  if (document.documentElement.clientWidth < 420) {
-    MagicY = 5;
-    MagicX = -1.5;
-  }
+  // if (document.documentElement.clientWidth < 420) {
+  //   MagicY = 5;
+  //   MagicX = -1.5;
+  // }
 
   const map = document.querySelector(mapSelector);
 
