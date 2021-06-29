@@ -7,6 +7,10 @@
 .other__title {
   margin-top: 0;
   margin-bottom: 30px;
+
+  @media (max-width: 660px) {
+    padding-right: 30px;
+  }
 }
 
 .other__list {
@@ -92,6 +96,10 @@
 .other__text {
   margin: 0;
   padding-left: 60px;
+
+  @media (max-width: 1300px) {
+    padding-left: 20px;
+  }
 }
 
 .swiper-button-next,

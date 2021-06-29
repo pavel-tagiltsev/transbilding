@@ -6,26 +6,6 @@ function mapAnimation(mapSelector) {
   let MagicY = 5;
   let MagicX = 2.5;
 
-  // if (document.documentElement.clientWidth < 1000) {
-  //   MagicY = 5;
-  //   MagicX = 1;
-  // }
-
-  // if (document.documentElement.clientWidth < 900) {
-  //   MagicY = 5;
-  //   MagicX = 0.5;
-  // }
-
-  // if (document.documentElement.clientWidth < 660) {
-  //   MagicY = 5;
-  //   MagicX = -0.2;
-  // }
-
-  // if (document.documentElement.clientWidth < 420) {
-  //   MagicY = 5;
-  //   MagicX = -1.5;
-  // }
-
   const map = document.querySelector(mapSelector);
 
   let pinCoords = [{
@@ -135,28 +115,13 @@ function mapAnimation(mapSelector) {
     obj.y = 100 * obj.y / 674;
   });
 
-  function addZero(number) {
-    if (number < 10) {
-      return `0.${number}`;
-    }
-
-    if (number >= 10) {
-      return number / 10;
-    }
-
-    return number;
-  }
-
   for (let i = 0; i < pinCoords.length; i++) {
     const pin = document.createElement('div');
 
-    pin.style = `
-                top: ${pinCoords[i].y - MagicY}%;
-                left: ${pinCoords[i].x - MagicX}%;
-                transition: all 1s ease ${addZero(i)}s;
-            `;
+    pin.style.top = `${pinCoords[i].y - MagicY}%`;
+    pin.style.left = `${pinCoords[i].x - MagicX}%`;
 
-    pin.classList.add('map__pin', '_anim-items', '_hide-pin');
+    pin.classList.add('map__pin', '_anim-map');
 
     map.appendChild(pin);
   }

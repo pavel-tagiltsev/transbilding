@@ -6,6 +6,15 @@
   /* background-image: url('../img/competence-bg.png'); */
   background-repeat: no-repeat;
   background-color: $grey;
+
+  @media (max-width: 1239px) {
+    background-position: calc(50vw - 10%) 102%;
+  }
+
+  @media (max-width: 840px) {
+    padding-bottom: 200px;
+    background-position: 10% 100%;
+  }
 }
 
 .competence__title {
@@ -21,6 +30,34 @@
 
   @media (max-width: 1239px) {
     height: 500px;
+  }
+
+  @media (max-width: 1240px) {
+    height: 600px;
+  }
+
+  @media (max-width: 840px) {
+    height: 1100px;
+  }
+
+  @media (max-width: 600px) {
+    height: 1150px;
+  }
+
+  @media (max-width: 500px) {
+    height: 1200px;
+  }
+
+  @media (max-width: 380px) {
+    height: 1250px;
+  }
+
+  @media (max-width: 360px) {
+    height: 1350px;
+  }
+
+  @media (max-width: 340px) {
+    height: 1450px;
   }
 }
 

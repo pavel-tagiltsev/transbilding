@@ -3,10 +3,14 @@
   padding-bottom: 60px;
 }
 
-.certificates .container {
+.certificates__wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+  }
 }
 
 .certificates__title {
@@ -14,6 +18,14 @@
   margin: 0;
   padding: 10px;
   width: 350px;
+
+  @media (max-width: 1300px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 420px) {
+    width: 100%;
+  }
 }
 
 .slider-wrapper {
@@ -22,6 +34,10 @@
 
 .certificates__container {
   width: 850px;
+
+  @media (max-width: 1300px) {
+    width: 100%;
+  }
 }
 
 .certificates__img {
@@ -37,8 +53,16 @@
 
 .certificates__prev {
   left: -40px;
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
 }
 
 .certificates__next {
   right: -40px;
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
 }

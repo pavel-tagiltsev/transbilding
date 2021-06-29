@@ -1,122 +1,250 @@
 function scrollAnimation() {
-  const animItems = document.querySelectorAll('._anim-items');
-  const animSections = document.querySelector('._anim-section');
-  const animExpertises = document.querySelectorAll('._anim-expertise');
-  const animPromos = document.querySelectorAll('._anim-promo');
-
-  function clearStyle(item) {
-    setTimeout(() => {
-      item.style = ``;
-    }, 3000);
-  }
+  const promoAnimItems = document.querySelectorAll('._anim-promo');
+  const expertiseAnimItems = document.querySelectorAll('._anim-expertise');
+  const aboutAnimItems = document.querySelectorAll('._anim-about');
+  const mapAnimItems = document.querySelectorAll('._anim-map');
+  const teamAnimItems = document.querySelectorAll('._anim-team');
+  const buildingAnimItems = document.querySelectorAll('._anim-building');
+  const designAnimItems = document.querySelectorAll('._anim-design');
+  const projectAnimItems = document.querySelectorAll('._anim-project');
+  const competenceAnimItems = document.querySelectorAll('._anim-competence');
 
   function addZero(number) {
     if (number < 10) {
       return `0.${number}`;
     }
-
     if (number >= 10) {
       return number / 10;
     }
-
     return number;
   }
 
-  // Promo
-  function promoSectionAnimate() {
-    animPromos.forEach(item => {
-      item.style = `opacity: 0;
-        transform: translate(0, 120%);`;
-    });
-
-    setTimeout(() => {
-      animPromos.forEach((item, i) => {
-        item.style = `opacity: 1;
-          transform: translate(0, 0);
-          transition: all 1s ease ${addZero(i * 5)}s;`;
-        clearStyle(item);
-      });
+  function hideItem({
+    items,
+    opacity = 0,
+    transform
+  }) {
+    items.forEach(item => {
+      item.style.opacity = `${opacity}`;
+      item.style.transform = `${transform}`;
     });
   }
 
-  promoSectionAnimate();
+  function setDefaultParms(item) {
+    item.style.opacity = `1`;
+    item.style.transform = `translate(0, 0)`;
+  }
 
-  // Expertise
-  animExpertises.forEach(item => {
-    item.style = `opacity: 0;
-    transform: translate(0, 25%);
-    transition: all 0s ease 0s;`;
+  // Promo
+  hideItem({
+    items: promoAnimItems,
+    transform: 'translate(0, 120%)'
   });
 
-  function ExpertiseAnimationBreakpoints(item, i) {
-    if (document.documentElement.clientWidth >= 1180) {
-      item.style = `opacity: 1;
-      transform: translate(0, 0);
-      transition: all 1s ease ${addZero(i*3)}s;`;
-      clearStyle(item);
+
+  function promoSectionAnimate(item, i) {
+    setDefaultParms(item);
+    item.style.transition = `all 1s ease ${addZero(i * 5)}s`;
+  }
+
+  // Expertise
+  hideItem({
+    items: expertiseAnimItems,
+    transform: 'translate(0, 25%)'
+  });
+
+  function expertiseSectionAnimate(item, i) {
+    if (document.documentElement.clientWidth > 1300) {
+      setDefaultParms(item);
+      item.style.transition = `all 1s ease ${addZero(i*3)}s`;
       return;
     }
 
     if (document.documentElement.clientWidth > 660) {
+      setDefaultParms(item);
       if (i <= 2) {
-        item.style = `opacity: 1;
-        transform: translate(0, 0);
-        transition: all 1s ease ${addZero(i*3)}s;`;
-        clearStyle(item);
+        item.style.transition = `all 1s ease ${addZero(i*3)}s`;
       } else {
-        item.style = `opacity: 1;
-        transform: translate(0, 0);
-        transition: all 1s ease ${addZero((i - 3) * 3)}s;`;
-        clearStyle(item);
+        item.style.transition = `all 1s ease ${addZero((i - 3) * 3)}s`;
       }
       return;
     }
 
     if (document.documentElement.clientWidth > 420) {
+      setDefaultParms(item);
       if (i <= 1) {
-        item.style = `opacity: 1;
-        transform: translate(0, 0);
-        transition: all 1s ease ${addZero(i*3)}s;`;
-        clearStyle(item);
+        item.style.transition = `all 1s ease ${addZero(i*3)}s`;
       } else if (i > 1 && i <= 3) {
-        item.style = `opacity: 1;
-        transform: translate(0, 0);
-        transition: all 1s ease ${addZero((i - 2) * 3)}s;`;
-        clearStyle(item);
+        item.style.transition = `all 1s ease ${addZero((i - 2) * 3)}s`;
       } else {
-        item.style = `opacity: 1;
-        transform: translate(0, 0);
-        transition: all 1s ease ${addZero((i - 4) * 3)}s;`;
-        clearStyle(item);
+        item.style.transition = `all 1s ease ${addZero((i - 4) * 3)}s`;
       }
       return;
     }
 
-    if (document.documentElement.clientWidth >= 320) {
-      item.style = `opacity: 1;
-      transform: translate(0, 0);
-      transition: all 1s ease 0s;`;
-      clearStyle(item);
+    if (document.documentElement.clientWidth >= 1) {
+      setDefaultParms(item);
+      item.style.transition = `all 1s ease 0s`;
       return;
     }
   }
 
-  const offset = function (el) {
-    const rect = el.getBoundingClientRect(),
-      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return {
-      top: rect.top + scrollTop,
-      left: rect.left + scrollLeft
-    };
-  };
+  // About
+  hideItem({
+    items: aboutAnimItems,
+    transform: 'translate(0, 50%)'
+  });
 
-  function triggerActivePointByScroll(animItems, animStart, functionAnim) {
+  function aboutSectionAnimate(item, i) {
+    setDefaultParms(item);
+    item.style.transition = `all 1s ease ${addZero(i * 5)}s`;
+  }
+
+  // Map
+  hideItem({
+    items: mapAnimItems,
+    transform: 'translate(0, -300%)'
+  });
+
+  function mapSectionAnimate(item, i) {
+    setDefaultParms(item);
+    item.style.transition = `all 1s ease ${addZero(i)}s`;
+  }
+
+  // Team
+  hideItem({
+    items: teamAnimItems,
+    transform: 'translate(0, 40%)'
+  });
+
+  function teamSectionAnimate(item, i) {
+    if (document.documentElement.clientWidth >= 1300) {
+      setDefaultParms(item);
+      item.style.transition = `all 1s ease ${addZero(i*3)}s`;
+      return;
+    }
+
+    if (document.documentElement.clientWidth >= 767) {
+      setDefaultParms(item);
+      if (i < 2) {
+        item.style.transition = `all 1s ease ${addZero(i*3)}s`;
+      } else {
+        item.style.transition = `all 1s ease ${addZero((i - 2) * 3)}s`;
+      }
+      return;
+    }
+
+    if (document.documentElement.clientWidth >= 1) {
+      setDefaultParms(item);
+      item.style.transition = `all 1s ease 0s`;
+      return;
+    }
+  }
+
+  // Building
+  hideItem({
+    items: buildingAnimItems,
+    transform: 'translate(-500px, 0)'
+  });
+
+
+  function buildingSectionAnimate(item, i) {
+    setDefaultParms(item);
+    item.style.transition = `all 1s ease ${addZero(i)}s`;
+  }
+
+  // Design
+  hideItem({
+    items: designAnimItems,
+    transform: 'translate(500px, 0)'
+  });
+
+  function designSectionAnimate(item, i) {
+    if (document.documentElement.clientWidth > 1000) {
+      setDefaultParms(item);
+      item.style.transition = `all 1s ease 1s`;
+    } else {
+      setDefaultParms(item);
+      item.style.transition = `all 1s ease 0s`;
+    }
+  }
+
+  // Projects
+  projectAnimItems.forEach((item, i) => {
+    item.style.opacity = `0`;
+
+    if (i == 0 || i == 1 || i == 4 || i == 5) {
+      item.style.transform = `translate(-500px, 0`;
+      return;
+    }
+
+    if (i == 2 || i == 3 || i == 6 || i == 7) {
+      item.style.transform = `translate(500px, 0`;
+      return;
+    }
+  });
+
+  // Competence
+  hideItem({
+    items: competenceAnimItems,
+    transform: 'scale(0)'
+  });
+
+  function competenceSectionAnimate(item, i) {
+    if (document.documentElement.clientWidth >= 1239) {
+      item.style.opacity = '1';
+      item.style.transform = 'scale(1)';
+
+      if (i < 3) {
+        item.style.transition = `all 1s ease ${addZero(i * 2)}s`;
+      } else {
+        item.style.transition = `all 1s ease ${addZero((i - 2) * 2)}s`;
+      }
+      return;
+    }
+
+    if (document.documentElement.clientWidth > 839) {
+      item.style.opacity = '1';
+      item.style.transform = 'scale(1)';
+
+      if (i < 2) {
+        item.style.transition = `all 1s ease ${addZero(i * 2)}s`;
+      } else if (i < 4) {
+        item.style.transition = `all 1s ease ${addZero((i - 2) * 2)}s`;
+      } else {
+        item.style.transition = `all 1s ease 0s`;
+      }
+      return;
+    }
+
+    if (document.documentElement.clientWidth < 839) {
+      item.style.opacity = '1';
+      item.style.transform = 'scale(1)';
+      item.style.transition = `all 1s ease 0s`;
+      return;
+    }
+  }
+
+  function projectsSectionAnimate(item, i) {
+    setDefaultParms(item);
+    item.style.transition = `all 1.5s ease 0s`;
+  }
+
+  function triggerAnimation(animItems, animStart, animation) {
+    const offset = function (el) {
+      const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      return {
+        top: rect.top + scrollTop,
+        left: rect.left + scrollLeft
+      };
+    };
+
     animItems.forEach((item, i) => {
       const animItemHeight = item.offsetHeight;
       const animItemOffset = offset(item).top;
 
-
       let animItemPoint = window.innerHeight - animItemHeight / animStart;
       if (animItemHeight > window.innerHeight) {
         animItemPoint = window.innerHeight - window.innerHeight / animStart;
@@ -124,48 +252,22 @@ function scrollAnimation() {
 
       if ((window.pageYOffset > animItemOffset - animItemPoint) &&
         window.pageYOffset < (animItemOffset + animItemPoint)) {
-        functionAnim(item, i);
+        animation(item, i);
       }
     });
   }
 
-  // if (animItems.length > 0) {
-
-  const animOnScroll = function () {
-
-    triggerActivePointByScroll(animExpertises, 4, ExpertiseAnimationBreakpoints);
-
-
-    for (let index = 0; index < animItems.length; index++) {
-
-      const animItem = animItems[index];
-      // const animSection = animSections[index];
-      const animExpertise = animExpertises[index];
-      const animItemHeight = animItem.offsetHeight;
-      const animItemOffset = offset(animItem).top;
-      const animStart = 4;
-
-
-
-      // if (animItem.classList.contains('_active')) {
-      //   setTimeout( ()=> {
-      //     animItem.style.transition ="all 0s ease 0s";
-
-      //   }, 1000);
-      // }
-
-      let animItemPoint = window.innerHeight - animItemHeight / animStart;
-      if (animItemHeight > window.innerHeight) {
-        animItemPoint = window.innerHeight - window.innerHeight / animStart;
-      }
-
-      if ((window.pageYOffset > animItemOffset - animItemPoint) &&
-        window.pageYOffset < (animItemOffset + animItemPoint)) {
-        animItem.classList.add('_active');
-      }
-    }
-
-  };
+  function animOnScroll() {
+    triggerAnimation(promoAnimItems, 4, promoSectionAnimate);
+    triggerAnimation(expertiseAnimItems, 4, expertiseSectionAnimate);
+    triggerAnimation(aboutAnimItems, -4, aboutSectionAnimate);
+    triggerAnimation(teamAnimItems, 4, teamSectionAnimate);
+    triggerAnimation(mapAnimItems, 4, mapSectionAnimate);
+    triggerAnimation(buildingAnimItems, 4, buildingSectionAnimate);
+    triggerAnimation(designAnimItems, 4, designSectionAnimate);
+    triggerAnimation(projectAnimItems, 4, projectsSectionAnimate);
+    triggerAnimation(competenceAnimItems, 4, competenceSectionAnimate);
+  }
 
   window.addEventListener('scroll', animOnScroll);
   animOnScroll();
