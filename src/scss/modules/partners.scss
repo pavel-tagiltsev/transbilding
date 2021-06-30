@@ -5,6 +5,7 @@
 }
 
 .partners__wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,10 +15,32 @@
   }
 }
 
+.partners__wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 1.6px;
+  height: 135%;
+  background-color: $gold;
+
+  @media (max-width: 560px) {
+    height: 130%;
+  }
+
+  @media (max-width: 420px) {
+    height: 115%;
+  }
+}
+
 .partners__title {
   margin: 0;
   padding: 10px;
   width: 350px;
+
+  @media (max-width: 585px) {
+    margin-bottom: 40px;
+  }
 }
 
 .partners__title::after {

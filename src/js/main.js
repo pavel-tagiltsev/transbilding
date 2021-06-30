@@ -23,7 +23,7 @@ import AOS from 'aos';
 Swiper.use([Navigation]);
 
 new Blazy({
-  offset: 1000
+  offset: 10000
 });
 
 
@@ -46,17 +46,17 @@ window.addEventListener("DOMContentLoaded", () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 25
+        spaceBetween: 0
       },
 
       678: {
         slidesPerView: 2,
-        spaceBetween: 50
+        spaceBetween: 0
       },
 
       1300: {
         slidesPerView: 3,
-        spaceBetween: 50
+        spaceBetween: 0
       }
     }
   });
@@ -74,16 +74,10 @@ window.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 25
       },
 
-      520: {
+      605: {
         slidesPerView: 2,
         spaceBetween: 50
       },
-
-      678: {
-        slidesPerView: 2,
-        spaceBetween: 50
-      },
-
 
       880: {
         slidesPerView: 3,
@@ -96,7 +90,7 @@ window.addEventListener("DOMContentLoaded", () => {
       },
       1300: {
         slidesPerView: 3,
-        spaceBetween: 100
+        spaceBetween: 50
       }
     }
   });

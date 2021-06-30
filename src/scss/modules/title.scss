@@ -21,21 +21,11 @@
 .title--1::before {
   content: "";
   position: absolute;
-  left: -2px;
+  left: 0;
   top: -4px;
   width: 70%;
   height: 5px;
   background-color: $white;
-}
-
-.title--1::after {
-  content: "";
-  position: absolute;
-  left: -2px;
-  top: -75px;
-  width: 2px;
-  height: 125px;
-  background-color: $gold;
 }
 
 .title--2 {
@@ -49,19 +39,9 @@
 .title--2::before {
   content: "";
   position: absolute;
-  left: -2px;
+  left: 0;
   bottom: -4px;
   width: 70%;
-  height: 4px;
+  height: 8px;
   background-color: $grey;
-}
-
-.title--2::after {
-  content: "";
-  position: absolute;
-  left: -2px;
-  top: -1px;
-  width: 2px;
-  height: 547px;
-  background-color: $gold;
 }

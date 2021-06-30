@@ -19,7 +19,9 @@ function scrollAnimation() {
     }) => {
 
       if (detail.getAttribute('data-aos') == 'trigger') {
+        console.log('something');
         detail.setAttribute('data-aos', 'trigger-done');
+        texts[0].classList.add('projects__link--active');
 
         setInterval(function () {
           texts[i].classList.add('projects__link--active');
@@ -27,16 +29,15 @@ function scrollAnimation() {
 
           setTimeout(() => {
             texts[i - 1].classList.remove('projects__link--active');
-          }, 3700);
+          }, 2700);
 
 
           if (i >= texts.length) {
             setTimeout(() => {
               i = 0;
-            }, 3850);
+            }, 2850);
           }
-          console.log('something');
-        }, 4000);
+        }, 3000);
       }
     });
   }
@@ -217,10 +218,10 @@ function scrollAnimation() {
   // });
 
   // Competence
-  hideItem({
-    items: competenceAnimItems,
-    transform: 'scale(0)'
-  });
+  // hideItem({
+  //   items: competenceAnimItems,
+  //   transform: 'scale(0)'
+  // });
 
   function competenceSectionAnimate(item, i) {
     if (document.documentElement.clientWidth >= 1239) {
@@ -298,7 +299,7 @@ function scrollAnimation() {
     triggerAnimation(buildingAnimItems, 4, buildingSectionAnimate);
     triggerAnimation(designAnimItems, 4, designSectionAnimate);
     // triggerAnimation(projectAnimItems, 4, projectsSectionAnimate);
-    triggerAnimation(competenceAnimItems, 4, competenceSectionAnimate);
+    // triggerAnimation(competenceAnimItems, 4, competenceSectionAnimate);
   }
 
   window.addEventListener('scroll', animOnScroll);

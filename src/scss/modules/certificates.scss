@@ -8,6 +8,10 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 1450px) {
+    padding-right: 30px;
+  }
+
   @media (max-width: 1300px) {
     flex-direction: column;
   }
@@ -54,7 +58,7 @@
 .certificates__prev {
   left: -40px;
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1450px) {
     display: none;
   }
 }
@@ -62,7 +66,7 @@
 .certificates__next {
   right: -40px;
 
-  @media (max-width: 1300px) {
-    display: none;
+  @media (max-width: 1450px) {
+    right: -20px;
   }
 }
