@@ -53,7 +53,7 @@
 }
 
 .projects__img:hover ~ .projects__link {
-  @media (max-width: 767px) {
+  @media (min-width: 767px) {
     opacity: 1;
   }
 }
@@ -80,7 +80,7 @@
 }
 
 .projects__link:hover {
-  @media (max-width: 767px) {
+  @media (min-width: 767px) {
     opacity: 1;
   }
 }

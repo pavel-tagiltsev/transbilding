@@ -48,12 +48,10 @@ window.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
         spaceBetween: 0
       },
-
       678: {
         slidesPerView: 2,
         spaceBetween: 0
       },
-
       1300: {
         slidesPerView: 3,
         spaceBetween: 0
@@ -73,17 +71,14 @@ window.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
         spaceBetween: 25
       },
-
       605: {
         slidesPerView: 2,
         spaceBetween: 50
       },
-
       880: {
         slidesPerView: 3,
         spaceBetween: 50
       },
-
       1140: {
         slidesPerView: 4,
         spaceBetween: 50

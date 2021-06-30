@@ -19,8 +19,7 @@
   left: -15px;
 
   @media (max-width: 660px) {
-    width: 608px;
-    height: 325px;
+    width: 220%;
   }
 }
 
@@ -55,6 +54,7 @@
 
   @media (max-width: 660px) {
     flex-direction: column;
+    // display: none;
   }
 }
 
