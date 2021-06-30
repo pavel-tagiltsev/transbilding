@@ -9,6 +9,38 @@ function scrollAnimation() {
   const projectAnimItems = document.querySelectorAll('._anim-project');
   const competenceAnimItems = document.querySelectorAll('._anim-competence');
 
+  // Test
+  const texts = document.querySelectorAll('.projects__link');
+  var i = 0;
+
+  if (document.documentElement.clientWidth > 767) {
+    document.addEventListener('aos:in', ({
+      detail
+    }) => {
+
+      if (detail.getAttribute('data-aos') == 'trigger') {
+        detail.setAttribute('data-aos', 'trigger-done');
+
+        setInterval(function () {
+          texts[i].classList.add('projects__link--active');
+          i++;
+
+          setTimeout(() => {
+            texts[i - 1].classList.remove('projects__link--active');
+          }, 3700);
+
+
+          if (i >= texts.length) {
+            setTimeout(() => {
+              i = 0;
+            }, 3850);
+          }
+          console.log('something');
+        }, 4000);
+      }
+    });
+  }
+
   function addZero(number) {
     if (number < 10) {
       return `0.${number}`;
@@ -170,19 +202,19 @@ function scrollAnimation() {
   }
 
   // Projects
-  projectAnimItems.forEach((item, i) => {
-    item.style.opacity = `0`;
+  // projectAnimItems.forEach((item, i) => {
+  //   item.style.opacity = `0`;
 
-    if (i == 0 || i == 1 || i == 4 || i == 5) {
-      item.style.transform = `translate(-500px, 0`;
-      return;
-    }
+  //   if (i == 0 || i == 1 || i == 4 || i == 5) {
+  //     item.style.transform = `translate(-500px, 0`;
+  //     return;
+  //   }
 
-    if (i == 2 || i == 3 || i == 6 || i == 7) {
-      item.style.transform = `translate(500px, 0`;
-      return;
-    }
-  });
+  //   if (i == 2 || i == 3 || i == 6 || i == 7) {
+  //     item.style.transform = `translate(500px, 0`;
+  //     return;
+  //   }
+  // });
 
   // Competence
   hideItem({
@@ -265,7 +297,7 @@ function scrollAnimation() {
     triggerAnimation(mapAnimItems, 4, mapSectionAnimate);
     triggerAnimation(buildingAnimItems, 4, buildingSectionAnimate);
     triggerAnimation(designAnimItems, 4, designSectionAnimate);
-    triggerAnimation(projectAnimItems, 4, projectsSectionAnimate);
+    // triggerAnimation(projectAnimItems, 4, projectsSectionAnimate);
     triggerAnimation(competenceAnimItems, 4, competenceSectionAnimate);
   }
 

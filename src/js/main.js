@@ -17,6 +17,8 @@ import Swiper, {
 const Blazy = require('blazy');
 require('fslightbox');
 
+import AOS from 'aos';
+
 
 Swiper.use([Navigation]);
 
@@ -31,6 +33,8 @@ window.addEventListener("DOMContentLoaded", () => {
   pageNavigate();
   fixedHeader();
   listToggle();
+
+  AOS.init();
 
   new Swiper('#swiper-other', {
     speed: 400,

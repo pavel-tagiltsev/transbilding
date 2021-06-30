@@ -25,3 +25,15 @@
 @import "modules/button-up.scss";
 @import "adaptive.scss";
 @import "animation.scss";
+@import "aos/dist/aos.css";
+
+[data-aos="show-text"] {
+  @media (max-width: 767px) {
+    opacity: 0;
+    transition-property: opacity;
+
+    &.aos-animate {
+      opacity: 1;
+    }
+  }
+}
