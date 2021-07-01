@@ -69,10 +69,10 @@ function scrollAnimation() {
   }
 
   // Promo
-  hideItem({
-    items: promoAnimItems,
-    transform: 'translate(0, 120%)'
-  });
+  // hideItem({
+  //   items: promoAnimItems,
+  //   transform: 'translate(0, 120%)'
+  // });
 
 
   function promoSectionAnimate(item, i) {
@@ -81,10 +81,10 @@ function scrollAnimation() {
   }
 
   // Expertise
-  hideItem({
-    items: expertiseAnimItems,
-    transform: 'translate(0, 25%)'
-  });
+  // hideItem({
+  //   items: expertiseAnimItems,
+  //   transform: 'translate(0, 25%)'
+  // });
 
   function expertiseSectionAnimate(item, i) {
     if (document.documentElement.clientWidth > 1300) {
@@ -123,10 +123,10 @@ function scrollAnimation() {
   }
 
   // About
-  hideItem({
-    items: aboutAnimItems,
-    transform: 'translate(0, 50%)'
-  });
+  // hideItem({
+  //   items: aboutAnimItems,
+  //   transform: 'translate(0, 50%)'
+  // });
 
   function aboutSectionAnimate(item, i) {
     setDefaultParms(item);
@@ -145,10 +145,10 @@ function scrollAnimation() {
   }
 
   // Team
-  hideItem({
-    items: teamAnimItems,
-    transform: 'translate(0, 40%)'
-  });
+  // hideItem({
+  //   items: teamAnimItems,
+  //   transform: 'translate(0, 40%)'
+  // });
 
   function teamSectionAnimate(item, i) {
     if (document.documentElement.clientWidth >= 1300) {
@@ -175,10 +175,10 @@ function scrollAnimation() {
   }
 
   // Building
-  hideItem({
-    items: buildingAnimItems,
-    transform: 'translate(-500px, 0)'
-  });
+  // hideItem({
+  //   items: buildingAnimItems,
+  //   transform: 'translate(-500px, 0)'
+  // });
 
 
   function buildingSectionAnimate(item, i) {
@@ -187,10 +187,10 @@ function scrollAnimation() {
   }
 
   // Design
-  hideItem({
-    items: designAnimItems,
-    transform: 'translate(500px, 0)'
-  });
+  // hideItem({
+  //   items: designAnimItems,
+  //   transform: 'translate(500px, 0)'
+  // });
 
   function designSectionAnimate(item, i) {
     if (document.documentElement.clientWidth > 1000) {
@@ -291,13 +291,13 @@ function scrollAnimation() {
   }
 
   function animOnScroll() {
-    triggerAnimation(promoAnimItems, 4, promoSectionAnimate);
-    triggerAnimation(expertiseAnimItems, 4, expertiseSectionAnimate);
-    triggerAnimation(aboutAnimItems, -4, aboutSectionAnimate);
-    triggerAnimation(teamAnimItems, 4, teamSectionAnimate);
+    // triggerAnimation(promoAnimItems, 4, promoSectionAnimate);
+    // triggerAnimation(expertiseAnimItems, 4, expertiseSectionAnimate);
+    // triggerAnimation(aboutAnimItems, -4, aboutSectionAnimate);
+    // triggerAnimation(teamAnimItems, 4, teamSectionAnimate);
     triggerAnimation(mapAnimItems, 4, mapSectionAnimate);
-    triggerAnimation(buildingAnimItems, 4, buildingSectionAnimate);
-    triggerAnimation(designAnimItems, 4, designSectionAnimate);
+    // triggerAnimation(buildingAnimItems, 4, buildingSectionAnimate);
+    // triggerAnimation(designAnimItems, 4, designSectionAnimate);
     // triggerAnimation(projectAnimItems, 4, projectsSectionAnimate);
     // triggerAnimation(competenceAnimItems, 4, competenceSectionAnimate);
   }

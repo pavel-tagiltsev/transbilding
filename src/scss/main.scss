@@ -37,3 +37,60 @@
     }
   }
 }
+
+[data-aos="team-1"],
+[data-aos="team-2"],
+[data-aos="team-3"],
+[data-aos="team-4"] {
+  opacity: 0;
+  transform: translateY(50%);
+  transition-property: opacity, transition-delay, transform;
+}
+
+[data-aos="team-1"] {
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.5s;
+
+    @media (max-width: 1300px) {
+      transition-delay: 0.5s;
+    }
+
+    @media (max-width: 647px) {
+      transition-delay: 0s;
+    }
+  }
+}
+
+[data-aos="team-2"] {
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
+
+    @media (max-width: 1300px) {
+      transition-delay: 0s;
+    }
+  }
+}
+
+[data-aos="team-3"] {
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+
+    @media (max-width: 647px) {
+      transition-delay: 0s;
+    }
+  }
+}
+
+[data-aos="team-4"] {
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+  }
+}

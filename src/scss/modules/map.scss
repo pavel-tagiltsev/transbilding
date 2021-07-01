@@ -1,16 +1,16 @@
 .map {
   position: relative;
-  overflow: hidden;
+  height: 100%;
 
   @media (max-width: 1200px) {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
 
-  @media (max-width: 660px) {
+  @media (max-width: 1000px) {
     display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    margin-bottom: 60px;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    margin-bottom: 0;
   }
 }
 
@@ -18,8 +18,12 @@
   position: relative;
   left: -15px;
 
-  @media (max-width: 660px) {
-    width: 220%;
+  @media (max-width: 1000px) {
+    width: 200%;
+  }
+
+  @media (max-width: 564px) {
+    margin-top: 50px;
   }
 }
 
@@ -31,18 +35,29 @@
 
 .map__content {
   position: absolute;
-  right: 21px;
-  top: 35px;
   z-index: 1;
   width: 500px;
 
-  @media (max-width: 1000px) {
-    position: static;
-    width: 80%;
+  @media (min-width: 1000px) {
+    right: 21px;
+    top: 35px;
   }
 
-  @media (max-width: 660px) {
-    width: 100%;
+  @media (max-width: 1000px) {
+    left: 20px;
+    top: 20px;
+    width: 94%;
+    height: 17.5%;
+  }
+
+  @media (max-width: 754px) {
+    width: 93.5%;
+    height: 17%;
+  }
+
+  @media (max-width: 571px) {
+    width: 90%;
+    height: 16%;
   }
 }
 
@@ -52,9 +67,8 @@
   padding: 50px 20px 20px 30px;
   background-color: rgba(255, 255, 255, 0.8);
 
-  @media (max-width: 660px) {
-    flex-direction: column;
-    // display: none;
+  @media (max-width: 1000px) {
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 
@@ -73,9 +87,15 @@
   position: absolute;
   left: -1px;
   top: -60px;
-  width: 2px;
+  width: 1.6px;
   height: 140px;
   background-color: $gold;
+}
+
+.map__subtitle {
+  @media (max-width: 1000px) {
+    display: none;
+  }
 }
 
 .map__list-area,
@@ -83,6 +103,10 @@
 .map__list-coutry-end {
   margin: 0;
   padding-left: 20px;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 }
 
 .map__list-area {

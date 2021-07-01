@@ -21,7 +21,7 @@
 .title--1::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -0.5px;
   top: -4px;
   width: 70%;
   height: 5px;
@@ -39,7 +39,7 @@
 .title--2::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -0.5px;
   bottom: -4px;
   width: 70%;
   height: 8px;
