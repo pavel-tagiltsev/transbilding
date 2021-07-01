@@ -121,7 +121,7 @@ function mapAnimation(mapSelector) {
     pin.setAttribute('data-aos', 'fade-down');
     pin.setAttribute('data-aos-once', 'true');
     pin.setAttribute('data-aos-anchor', '#map');
-    pin.setAttribute('data-aos-delay',`${i * 100}`);
+    pin.setAttribute('data-aos-delay',`${(i * 100) + 500}`);
     pin.setAttribute('data-aos-duration', '1000');
     pin.style.top = `${pinCoords[i].y - MagicY}%`;
     pin.style.left = `${pinCoords[i].x - MagicX}%`;

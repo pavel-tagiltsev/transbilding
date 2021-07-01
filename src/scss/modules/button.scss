@@ -8,8 +8,11 @@
   background-color: #a68d5e;
 
   @media (max-width: 800px) {
-    padding: 10px;
-    font-size: 10px;
+    font-size: 11px;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 
