@@ -33,6 +33,17 @@
   object-position: 0 0;
 }
 
+.map__pin {
+  content: "";
+  position: absolute;
+  width: 2%;
+  height: 5%;
+  background-image: url("../img/pin.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .map__content {
   position: absolute;
   z-index: 1;
@@ -44,20 +55,22 @@
   }
 
   @media (max-width: 1000px) {
-    left: 20px;
+    left: 0;
     top: 20px;
-    width: 94%;
+    width: 100%;
+    height: 18%;
+  }
+
+  @media (max-width: 600px) {
     height: 17.5%;
   }
 
-  @media (max-width: 754px) {
-    width: 93.5%;
+  @media (max-width: 470px) {
     height: 17%;
   }
 
-  @media (max-width: 571px) {
-    width: 90%;
-    height: 16%;
+  @media (max-width: 400px) {
+    height: 16.5%;
   }
 }
 
@@ -65,10 +78,11 @@
   display: flex;
   border: 2px solid $gold;
   padding: 50px 20px 20px 30px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba($white, 0.8);
 
   @media (max-width: 1000px) {
-    background-color: rgba(255, 255, 255, 0);
+    height: 480%;
+    background-color: rgba($white, 0);
   }
 }
 

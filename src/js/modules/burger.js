@@ -4,8 +4,6 @@ function listToggle() {
     const button = document.querySelector(".main-nav__toggle");
     const list = document.querySelector(".main-nav__list");
 
-    // button.classList.remove("no--js");
-
     window.addEventListener('resize', () => {
 
         if (window.matchMedia("(min-width: 1180px)").matches) {

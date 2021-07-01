@@ -4,11 +4,12 @@ import '../scss/main.scss';
 import '../index.html';
 
 // Modules
-import scrollAnimation from './modules/animation';
+import textShow from './modules/show-text';
 import mapAnimation from './modules/map';
 import pageNavigate from './modules/navigation';
 import fixedHeader from './modules/header';
 import listToggle from './modules/burger';
+import buttonUp from './modules/btn-up';
 
 // Libs
 import Swiper, {
@@ -16,23 +17,23 @@ import Swiper, {
 } from 'swiper';
 const Blazy = require('blazy');
 require('fslightbox');
-
 import AOS from 'aos';
 
 
 Swiper.use([Navigation]);
 
 new Blazy({
-  offset: 10000
+  offset: 1000
 });
 
 
 window.addEventListener("DOMContentLoaded", () => {
   mapAnimation('#map');
-  scrollAnimation();
+  textShow();
   pageNavigate();
   fixedHeader();
   listToggle();
+  buttonUp();
 
   AOS.init();
 

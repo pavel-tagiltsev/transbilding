@@ -1,0 +1,179 @@
+@import "aos/dist/aos.css";
+
+/* Header animation */
+.header-hide {
+  opacity: 0;
+  transform: translate(0, -500px);
+  transition: all 0.5s ease 0s;
+}
+
+.header-fixed {
+  z-index: 100;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// Expertise
+[data-aos="expertise-1"],
+[data-aos="expertise-2"],
+[data-aos="expertise-3"],
+[data-aos="expertise-4"],
+[data-aos="expertise-5"],
+[data-aos="expertise-6"] {
+  opacity: 0;
+  transform: translateY(50%);
+  transition-property: opacity, transition-delay, transform;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos="expertise-1"] {
+  &.aos-animate {
+    transition-delay: 0ms;
+  }
+}
+
+[data-aos="expertise-2"] {
+  &.aos-animate {
+    transition-delay: 300ms;
+  }
+
+  @media (max-width: 420px) {
+    transition-delay: 0ms;
+  }
+}
+
+[data-aos="expertise-3"] {
+  &.aos-animate {
+    transition-delay: 600ms;
+
+    @media (max-width: 660px) {
+      transition-delay: 0ms;
+    }
+  }
+}
+
+[data-aos="expertise-4"] {
+  &.aos-animate {
+    transition-delay: 900ms;
+
+    @media (max-width: 1300px) {
+      transition-delay: 0ms;
+    }
+
+    @media (max-width: 660px) {
+      transition-delay: 300ms;
+    }
+
+    @media (max-width: 420px) {
+      transition-delay: 0ms;
+    }
+  }
+}
+
+[data-aos="expertise-5"] {
+  &.aos-animate {
+    transition-delay: 1200ms;
+
+    @media (max-width: 1300px) {
+      transition-delay: 300ms;
+    }
+
+    @media (max-width: 660px) {
+      transition-delay: 0ms;
+    }
+  }
+}
+
+[data-aos="expertise-6"] {
+  &.aos-animate {
+    transition-delay: 1500ms;
+
+    @media (max-width: 1300px) {
+      transition-delay: 600ms;
+    }
+
+    @media (max-width: 660px) {
+      transition-delay: 300ms;
+    }
+
+    @media (max-width: 420px) {
+      transition-delay: 0ms;
+    }
+  }
+}
+
+// Team
+[data-aos="team-1"],
+[data-aos="team-2"],
+[data-aos="team-3"],
+[data-aos="team-4"] {
+  opacity: 0;
+  transform: translateY(50%);
+  transition-property: opacity, transition-delay, transform;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos="team-1"] {
+  &.aos-animate {
+    transition-delay: 1.5s;
+
+    @media (max-width: 1300px) {
+      transition-delay: 0.5s;
+    }
+
+    @media (max-width: 647px) {
+      transition-delay: 0s;
+    }
+  }
+}
+
+[data-aos="team-2"] {
+  &.aos-animate {
+    transition-delay: 1s;
+
+    @media (max-width: 1300px) {
+      transition-delay: 0s;
+    }
+  }
+}
+
+[data-aos="team-3"] {
+  &.aos-animate {
+    transition-delay: 0.5s;
+
+    @media (max-width: 647px) {
+      transition-delay: 0s;
+    }
+  }
+}
+
+[data-aos="team-4"] {
+  &.aos-animate {
+    transition-delay: 0s;
+  }
+}
+
+// Competance
+[data-aos="show-text"] {
+  @media (max-width: 767px) {
+    opacity: 0;
+    transition-property: opacity;
+
+    &.aos-animate {
+      opacity: 1;
+    }
+  }
+}
+
+/* Button-up animation */
+.button-up.fixed {
+  transform: scale(1);
+}
