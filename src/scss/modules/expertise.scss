@@ -171,8 +171,8 @@
     background-image: url("../img/manhole.svg");
 
     @media (max-width: 420px) {
-      right: -10px;
-      top: 77px;
+      right: 8px;
+      top: 323px;
       width: 50px;
       height: 50px;
     }
@@ -191,8 +191,8 @@
     }
 
     @media (max-width: 420px) {
-      right: -42px;
-      top: 32px;
+      right: -5px;
+      top: 303px;
       width: 90px;
       height: 90px;
     }
@@ -202,8 +202,8 @@
     background-image: url("../img/traffic-cone.svg");
 
     @media (max-width: 420px) {
-      right: -21px;
-      top: 87px;
+      right: 12px;
+      top: 328px;
       width: 57px;
       height: 65px;
     }
@@ -222,8 +222,8 @@
     }
 
     @media (max-width: 420px) {
-      right: -42px;
-      top: 55px;
+      right: -7px;
+      top: 320px;
       width: 70px;
       height: 70px;
     }
@@ -233,8 +233,8 @@
     background-image: url("../img/еngine.svg");
 
     @media (max-width: 420px) {
-      right: -40px;
-      top: 83px;
+      right: 0px;
+      top: 333px;
       width: 80px;
       height: 80px;
     }
@@ -253,10 +253,10 @@
     }
 
     @media (max-width: 420px) {
-      right: -49px;
-    top: 48px;
-    width: 100px;
-    height: 100px;
+      right: -8px;
+      top: 315px;
+      width: 100px;
+      height: 100px;
     }
   }
 
@@ -267,6 +267,7 @@
 }
 
 @media (max-width: 1300px) {
+
   .expertise__item:nth-child(4),
   .expertise__item:nth-child(6) {
     flex-direction: column;
@@ -347,5 +348,49 @@
 
   .expertise__item:nth-child(3)::before {
     top: 62.7%;
+  }
+
+  .expertise__item:nth-child(odd) .expertise__text {
+    padding-top: 20px;
+  }
+
+  .expertise__item:nth-child(even) .expertise__text {
+    padding-top: 20px;
+  }
+
+  .expertise__item:nth-child(odd) .expertise__text::before {
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 95%;
+    z-index: -1;
+  }
+
+  .expertise__item:nth-child(even) .expertise__text::before {
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 95%;
+    z-index: -1;
+  }
+
+  .expertise__item:nth-child(3)::before {
+    top: 64.3%;
+  }
+
+  .expertise__item:nth-child(5)::before {
+    top: 64.3%;
+  }
+
+  .expertise {
+    padding-bottom: 0;
+  }
+
+  .expertise__item {
+    position: relative;
+  }
+
+  .expertise__text {
+    position: static;
   }
 }
