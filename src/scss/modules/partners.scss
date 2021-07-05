@@ -59,7 +59,7 @@
 .partners__item {
   margin-right: 25px;
   margin-bottom: 25px;
-  width: 120px;
+  width: 150px;
 
   @media (max-width: 420px) {
     width: 45%;
@@ -72,4 +72,14 @@
 
 .partners__item img {
   width: 100%;
+}
+
+.partners__item:nth-child(5) img {
+  height: 76px;
+  object-fit: cover;
+}
+
+.partners__item:nth-child(11) img {
+  height: 76px;
+  object-fit: cover;
 }
