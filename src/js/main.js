@@ -23,7 +23,7 @@ import AOS from 'aos';
 Swiper.use([Navigation]);
 
 new Blazy({
-  offset: 1000
+  offset: 500
 });
 
 
