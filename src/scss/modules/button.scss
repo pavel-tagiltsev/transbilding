@@ -5,13 +5,13 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   color: $white;
-  background-color: #a68d5e;
+  background-color: $dark-gold;
 
   @media (max-width: 400px) {
     font-size: 13px;
   }
 
-  @media (max-width: 335px) {
+  @media (max-width: 350px) {
     font-size: 11px;
   }
 
@@ -22,7 +22,7 @@
 
 .button:hover,
 .button:focus {
-  background-color: #c7a86f;
+  background-color: $dark-gold;
 }
 
 .button:active {

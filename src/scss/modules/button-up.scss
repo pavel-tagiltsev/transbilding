@@ -12,7 +12,10 @@
   cursor: pointer;
 
   @media (max-width: 500px) {
-    display: none;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
   }
 }
 

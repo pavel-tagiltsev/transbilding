@@ -4,7 +4,8 @@
   background-image: url("../img/hd-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #115006;
+  background-color: $blue;
+  background-position: center;
 }
 
 .promo__wrapper {
@@ -21,7 +22,7 @@
   max-width: 500px;
 
   @media (max-width: 800px) {
-    max-width: 350px;
+    width: 350px;
   }
 }
 
@@ -40,7 +41,7 @@
 .promo__title span {
   font-size: 50px;
   line-height: 55px;
-  color: #a68d5e;
+  color: $white;
   font-weight: 300;
 
   @media (max-width: 800px) {
