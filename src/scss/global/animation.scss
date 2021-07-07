@@ -21,7 +21,7 @@
 [data-aos="expertise-5"],
 [data-aos="expertise-6"] {
   opacity: 0;
-  transform: translateY(50%);
+  transform: translateY(20%);
   transition-property: opacity, transition-delay, transform;
 
   &.aos-animate {
@@ -112,7 +112,7 @@
 [data-aos="team-3"],
 [data-aos="team-4"] {
   opacity: 0;
-  transform: translateY(50%);
+  transform: translateY(20%);
   transition-property: opacity, transition-delay, transform;
 
   &.aos-animate {
